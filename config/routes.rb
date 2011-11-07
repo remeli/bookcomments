@@ -1,5 +1,7 @@
 Bookcomments::Application.routes.draw do
   
+  resources :categories
+
   # pages:
   match "/about" => "pages#about"
   match "/contacts" => "pages#contacts"

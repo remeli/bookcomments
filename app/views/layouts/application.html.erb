@@ -6,38 +6,13 @@
 </head>
 <body>
   <div class="container">
-    <div class="row" id="header">
-      <div class="six columns" >
-        <h1 id="main-title">КнигаЛицо.ру</h1>
-      </div>
-      <div class="six columns" id="search">
-        <form class="nice custom">
-          <input type="text" id="search_text" value="The Тёлки...">
-          <select id="form-list-search">
-            <option SELECTED value="books">книги</option>
-            <option value="authors">авторы</option>
-            <option valie="other">разное</option>
-          </select>
-          <input type="submit" id="submit-search" class="small white nice button radius" value="Поиск">    
-        </form>
-      </div>
-    </div>
-    <div class="row" id="main-menu">
-      <div class="twelve columns">
-        <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Книги</a></li>
-          <li><a href="#">Авторы</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </div>
-    </div>
+    <%= render('layouts/header') %>
+    <%= render('layouts/menu') %>
     <div class="row" id="content-block">
       <div class="eight columns" id="main-content">
         <div class="row" id="books">
           <div class="twelve columns">
-            sssss
+            <%= yield %>
           </div>
         </div>
       </div>

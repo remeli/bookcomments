@@ -4,3 +4,27 @@
 
 // To customize the Active Admin interfaces, add your
 // styles here:
+.children{
+  padding:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background:#DBDBDB;
+  color:#414141;
+}
+.parent{
+  padding:5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background:#737373;
+  color:#EDEDED;
+  text-align:center;
+}
+#category_parent_id{
+  margin-left:250px;
+}

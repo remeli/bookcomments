@@ -20,6 +20,13 @@
         <div class="row sidebar-block">
           <div class="twelve columns">
             <h1 class="sidebar-title">Жанры</h1>
+            <ul id="tree">
+              <% @mains_categories.each do |cat| %>
+                <li class="">
+                  <%= cat.title %>
+                </li>
+              <% end %>
+            </ul>
           </div>
         </div>
         <div class="row sidebar-block">

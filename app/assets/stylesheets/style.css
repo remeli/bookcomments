@@ -1,5 +1,4 @@
 #header{
-  border:1px solid #ccc;
   height:80px;
   font-family:Arial,Tahoma,sans-serif;
 }
@@ -8,14 +7,66 @@
   margin-top:25px;
   margin-left:30px;
 }
-
 /* search */
 #search{
   margin-top:30px;
+  height:40px;
+}
+#search form{
+  height:40px;
 }
 #search_text{
+  font-size:11px;
   float:left;
+  width:150px;
+  height:24px;
+  outline:none;
+  border:1px solid #ddd;
+  border-right:none;
+  padding-right:3px;
+  padding-left:3px;
+  color:#6E6E6E;
 }
 #form-list-search{
   float:left;
+}
+#search .dropdown{
+  margin-top:0px;
+  float:left;
+}
+#search .dropdown .current{
+  border-left:none;
+}
+#submit-search{
+  float:left;
+  height:28px;
+  margin-left:5px;
+}
+.idleField{
+color: #ccc;
+}
+#main-menu{
+  height:30px;
+  margin-top:5px;
+}
+#main-menu ul{
+  width:100%;
+  overflow:hidden;
+  height:30px;
+  border-top:1px solid #eee;
+  padding-top:5px;
+}
+#main-menu ul li{
+  float:left;
+}
+
+#main-menu ul li a{
+  display:block;
+  height:30px;
+  padding-top:5px;
+  padding-right:20px;
+  padding-left:20px;
+}
+.clear{
+  both:clear;
 }

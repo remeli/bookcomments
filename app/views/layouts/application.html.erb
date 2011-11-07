@@ -11,31 +11,26 @@
         <h1 id="main-title">КнигаЛицо.ру</h1>
       </div>
       <div class="six columns" id="search">
-        <form action="" class="nice">
-          <input type="text" id="search_text">              
+        <form class="nice custom">
+          <input type="text" id="search_text" value="The Тёлки...">
           <select id="form-list-search">
-            <option value="books">книги</option>
+            <option SELECTED value="books">книги</option>
             <option value="authors">авторы</option>
-            <option valie="разное">разное</option>
-          </select>              
-          <input type="submit" id="submit-search" value="Поиск">              
-          <label>Dropdown Label</label>
-          <select style="display:none;">
-            <option SELECTED>This is a dropdown</option>
-            <option>This is another option</option>
-            <option>Look, a third option</option>
+            <option valie="other">разное</option>
           </select>
-          <div class="custom dropdown">
-            <a href="#" class="current">This is a dropdown</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>This is a dropdown</li>
-              <li>This is another option</li>
-              <li>Look, a third option</li>
-            </ul>
-          </div>
-          
+          <input type="submit" id="submit-search" class="small white nice button radius" value="Поиск">    
         </form>
+      </div>
+    </div>
+    <div class="row" id="main-menu">
+      <div class="twelve columns">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Книги</a></li>
+          <li><a href="#">Авторы</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
       </div>
     </div>
   </div>

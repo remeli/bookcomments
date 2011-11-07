@@ -45,6 +45,8 @@
 .idleField{
 color: #ccc;
 }
+
+/* menu */
 #main-menu{
   height:30px;
   margin-top:5px;
@@ -69,4 +71,32 @@ color: #ccc;
 }
 .clear{
   both:clear;
+}
+
+/* content */
+#main-content{
+  
+}
+#books{
+  border:1px solid #eee;
+  padding:10px;
+}
+
+/* sidebar */
+#sidebar .sidebar-block{
+/*  border:1px solid #eee;*/
+  margin-bottom:20px;
+}
+.sidebar-title{
+  font-size:16px;
+  font-weight: normal;
+  font-family:Arial,Tahoma,sans-serif;
+  text-align:right;
+  padding-right:10px;
+  padding:5px;
+  color:#9B9B9B;
+  border-bottom:1px solid #9B9B9B;
+}
+.sidebar-title:hover{
+  color:#585858;
 }

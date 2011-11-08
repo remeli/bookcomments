@@ -10,7 +10,7 @@
     <% else %>  
       <li>
         <span class="notsubcat">
-          <%= link_to category.title, category, :title => category.description %>
+          <%= link_to category.title, genre_path(category), :title => category.description %>
         </span>
       </li>
     <% end %>

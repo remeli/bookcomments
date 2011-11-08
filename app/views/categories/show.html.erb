@@ -1,1 +1,21 @@
-категория
+<% for book in @cat_books %>
+<div id="book_one">
+  <div class="row">
+    <div class="twelve columns">
+      <h1><%= link_to book.title, book %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="three columns" id="book_cover">
+      <%= image_tag(book.cover.url(:thumb)) %>
+    </div>
+    <div class="nine columns">
+      <h3>Описание:</h3>
+      <div id="book_description">
+        <%= book.description %>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<% end %>

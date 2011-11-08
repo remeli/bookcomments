@@ -5,8 +5,9 @@ Bookcomments::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-
-  resources :categories
+  
+  resources :categories  
+  match "genre/:id.:format" => "categories#show", :as => :genre, :defaults => { :format => "html"}
 
   # pages:
   match "/about" => "pages#about"

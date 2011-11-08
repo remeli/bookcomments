@@ -11,7 +11,7 @@ class Book < ActiveRecord::Base
   
   
   #scope
-  default_scope order("created_at ASC")
+  default_scope order("created_at DESC")
   
   #paperclip:
   has_attached_file :cover, :styles => {:medium => "200x275>", :thumb => "125x170>" },

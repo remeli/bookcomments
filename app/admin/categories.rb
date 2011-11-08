@@ -6,6 +6,7 @@ ActiveAdmin.register Category do
       end
     end
   end
+  
   menu :priority => 1, :label => "Категории"
   
   # index page:

@@ -77,8 +77,8 @@ color: #ccc;
 #main-content{
   
 }
-#books{
-  border:1px solid #eee;
+#left-content{
+/*  border:1px solid #eee;*/
   padding:10px;
 }
 

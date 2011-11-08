@@ -1,4 +1,11 @@
 ActiveAdmin.register Category do
+  before_filter do
+    Category.class_eval do
+      def to_param
+        id.to_s
+      end
+    end
+  end
   menu :priority => 1, :label => "Категории"
   
   # index page:

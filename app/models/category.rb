@@ -12,4 +12,7 @@ class Category < ActiveRecord::Base
   scope :mains, where("parent_id IS NULL")
   scope :childrens, where("parent_id IS NOT NULL")
   
+  def to_param
+    permalink
+  end
 end

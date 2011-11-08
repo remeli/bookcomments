@@ -1,3 +1,4 @@
+/* Copyright 2011. Kussainov Yerlan. Remeli.kz */
 #header{
   height:80px;
   font-family:Arial,Tahoma,sans-serif;
@@ -149,4 +150,38 @@ color: #ccc;
 }
 #menutree .active_category:hover{
   background-color: #0192dd; color: #fff;
+}
+
+/* footer */
+#footer{
+  height:200px;
+  margin-top:20px;
+/*  border:1px solid #eee;*/
+}
+#footer .copyright{
+  margin-left:0px;
+}
+#footer .bord_with_tabs{
+  height:30px;
+  border-bottom:1px solid #ddd;
+}
+#footer .copy_text{
+  margin-top:60px;
+  text-align:right;
+  font-size:11px;
+}
+#links1Tab ul.siteslinks{
+  float:left;
+  margin-right:30px;
+}
+#links1Tab ul li{
+  margin-bottom:2px;
+}
+#links1Tab ul li a{
+  color:#424242;
+  text-decoration:underline;
+}
+#links1Tab ul li a:hover{
+  color:#9B9B9B;
+  text-decoration:none;
 }

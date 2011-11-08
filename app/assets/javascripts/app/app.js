@@ -101,6 +101,6 @@ $(document).ready(function(){
   var active = new Array();
   active = name.split('/');
   $("#menutree").ready(function(){
-    $("a[href='/categories/"+active[4]+"']").addClass("active_category")
+    $("a[href='/genre/"+active[4]+"']").addClass("active_category")
   });
 });

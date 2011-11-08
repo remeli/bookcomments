@@ -1,3 +1,6 @@
-#book_one{
+.book_one{
   margin-bottom:10px;
+}
+.book_one .book_title a{
+  font-size:22px;
 }

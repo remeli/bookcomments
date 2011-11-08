@@ -36,5 +36,33 @@ module ApplicationHelper
     end
   end
   
+  def find_all_subcategories(category)
+    if category.children.size > 0
+      ret = "<ul>"
+      category.children.each do |subcat|
+       if subcat.children.size > 0
+         ret += "<li class='closed'>"
+         ret += "<span class='folder'>"
+         ret += link_to(subcat.title, subcat, :title => subcat.description)
+         ret += "</span>"
+         find_all_categories(subcat)
+         ret += "</li>"
+       else
+         ret += "<li>"
+         ret += "<span class='notsubcat'>"
+         ret += link_to(subcat.title, subcat, :title => subcat.description)
+         ret += "</span>"
+         ret += "</li>"
+       end
+      end
+      ret += "</ul>"
+    end
+  end
+  
+  def isset_subcat?(object)
+    if object.children.size > 0
+      true
+    end
+  end
   
 end

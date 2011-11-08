@@ -1,0 +1,18 @@
+<ul id="tree">
+  <% for category in @mains_categories %>
+    <% if isset_subcat?(category) %>
+      <li class="closed">
+        <span class="folder">
+          <%= category.title %>
+        </span>
+        <%= raw(find_all_subcategories(category)) %>
+      </li>
+    <% else %>  
+      <li>
+        <span class="notsubcat">
+          <%= link_to category.title, category, :title => category.description %>
+        </span>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

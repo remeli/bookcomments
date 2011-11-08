@@ -68,3 +68,29 @@ $(document).ready(function() {
         }
     });
 });
+
+
+//tree
+$(document).ready(function(){
+ $("#menutree").treeview({
+		animated: "fast",
+    persist: "cookie",
+ });
+});
+$(document).ready(function(){
+  $("#menutree span").click(function(){
+    if( $(this).parent("li").hasClass("collapsable") ){
+      $(this).addClass("openfolder");
+      // window.console && console.log("%o was toggled", this);
+    }
+    else{
+      $(this).removeClass("openfolder");
+    };
+  });
+});
+//save state tree
+$(document).ready(function(){
+  if( $("li").is('.collapsable') ){
+    $("li.collapsable>span").addClass("openfolder");
+  }
+});

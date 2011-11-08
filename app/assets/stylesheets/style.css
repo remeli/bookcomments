@@ -100,3 +100,32 @@ color: #ccc;
 .sidebar-title:hover{
   color:#585858;
 }
+
+/* menu tree */
+#menutree{
+  font-size:12px;
+}
+#menutree li{
+  color:#666;
+  margin-left:5px;
+  margin-bottom:5px;
+}
+#menutree li ul li{
+  margin-bottom:2px;
+}
+#menutree li ul{
+  margin-top:3px;
+  margin-bottom:5px;
+  margin-left:10px;
+}
+#menutree .folder{
+  background-image:url(/assets/menu-arrow-right.png);
+  background-repeat:no-repeat;
+  background-position:left;
+  padding-left:13px;
+}
+#menutree .openfolder{
+  background-image:url(/assets/menu-arrow-down.png);
+  background-repeat:no-repeat;
+  background-position:left;
+}

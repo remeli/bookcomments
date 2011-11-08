@@ -20,7 +20,7 @@
         Год выпуска: <span><%= to_year(book.year) %></span>
       </h4>
       <h4 class="category">
-        Жанр: <span><%= link_to book.category.title, genre_path(book.category) %></span>
+        Жанр: <span><%= link_to book.category.title, book.category %></span>
       </h4>
     </div>
   </div>

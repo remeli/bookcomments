@@ -43,14 +43,14 @@ module ApplicationHelper
        if subcat.children.size > 0
          ret += "<li class='closed'>"
          ret += "<span class='folder'>"
-         ret += link_to(subcat.title, genre_path(subcat), :title => subcat.description)
+         ret += link_to(subcat.title, subcat, :title => subcat.description)
          ret += "</span>"
          find_all_categories(subcat)
          ret += "</li>"
        else
          ret += "<li>"
          ret += "<span class='notsubcat'>"
-         ret += link_to(subcat.title, genre_path(subcat), :title => subcat.description)
+         ret += link_to(subcat.title, subcat, :title => subcat.description)
          ret += "</span>"
          ret += "</li>"
        end

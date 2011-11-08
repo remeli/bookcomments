@@ -1,5 +1,8 @@
 class Category < ActiveRecord::Base
   
+  #associations:
+  has_many :books, :dependent => :nullify
+  
   acts_as_tree :order => "title"
   
   # validates:

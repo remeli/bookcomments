@@ -116,13 +116,14 @@ color: #ccc;
 #menutree li ul{
   margin-top:3px;
   margin-bottom:5px;
-  margin-left:10px;
+  margin-left:15px;
 }
 #menutree .folder{
   background-image:url(/assets/menu-arrow-right.png);
   background-repeat:no-repeat;
   background-position:left;
   padding-left:13px;
+  cursor:pointer;
 }
 #menutree .openfolder{
   background-image:url(/assets/menu-arrow-down.png);

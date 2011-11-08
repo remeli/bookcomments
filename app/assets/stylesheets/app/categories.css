@@ -1,9 +1,6 @@
 .book_one{
   margin-bottom:10px;
 }
-.book_one .book_title{
-
-}
 .book_one .book_title a{
   font-size:20px;
   font-weight:normal;
@@ -14,8 +11,7 @@
   box-shadow: 0 0 5px black; /* Параметры тени */
   box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
-  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
-  
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */  
 }
 .book_cover img:hover{
   opacity:0.8;
@@ -38,4 +34,28 @@ h3.desc_title{
 }
 .book_description{
   margin-top:10px;
+}
+
+/* paginate */
+#paginate_block{
+  margin-top:20px;
+}
+
+#paginate_block span{
+  display:inline-block;
+  margin-right:5px; 
+  padding:5px 10px 5px 10px;;
+  background:#2a85e8;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+  font-weight:bold;
+  color:#000;
+}
+#paginate_block a{
+  color:#fff;
+}
+#paginate_block a:hover{
+  color:#C7C7C7;
 }

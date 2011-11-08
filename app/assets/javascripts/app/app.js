@@ -94,3 +94,13 @@ $(document).ready(function(){
     $("li.collapsable>span").addClass("openfolder");
   }
 });
+
+//active tree menu href
+$(document).ready(function(){
+  var name = document.location.href;
+  var active = new Array();
+  active = name.split('/');
+  $("#menutree").ready(function(){
+    $("a[href='/categories/"+active[4]+"']").addClass("active_category")
+  });
+});

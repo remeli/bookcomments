@@ -6,16 +6,36 @@
     </div>
   </div>
   <div class="row">
-    <div class="three columns" id="book_cover">
+    <div class="three columns book_cover">
       <%= image_tag(book.cover.url(:thumb)) %>
     </div>
-    <div class="nine columns">
-      <h3>Описание:</h3>
-      <div id="book_description">
+    <div class="nine columns books_info">
+      <h4 class="authorname">
+        Автор: <span><%= book.authorname %></span>
+      </h4>
+      <h4 class="isbn">
+        ISBN: <span><%= book.isbn %></span>
+      </h4>
+      <h4 class="year">
+        Год выпуска: <span><%= to_year(book.year) %></span>
+      </h4>
+      <h4 class="category">
+        Жанр: <span><%= link_to book.category.title, genre_path(book.category) %></span>
+      </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns book_description">
+      <h3 class="desc_title">Описание:</h3>
+      <div>
         <%= book.description %>
       </div>
     </div>
   </div>
-  
 </div>
 <% end %>
+<div class="row" id="paginate_block">
+  <div class="twelve columns">
+    <%= paginate @cat_books %>
+  </div>
+</div>

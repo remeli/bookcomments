@@ -11,9 +11,11 @@
 #search{
   margin-top:30px;
   height:40px;
+
 }
 #search form{
   height:40px;
+  float:right;
 }
 #search_text{
   font-size:11px;
@@ -103,7 +105,7 @@ color: #ccc;
 
 /* menu tree */
 #menutree{
-  font-size:12px;
+  font-size:13px;
 }
 #menutree li{
   color:#666;

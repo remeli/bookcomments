@@ -1,6 +1,41 @@
 .book_one{
   margin-bottom:10px;
 }
+.book_one .book_title{
+
+}
 .book_one .book_title a{
-  font-size:22px;
+  font-size:20px;
+  font-weight:normal;
+}
+.book_cover img{
+  width:115px;
+  height:170px;
+  box-shadow: 0 0 5px black; /* Параметры тени */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+  
+}
+.book_cover img:hover{
+  opacity:0.8;
+}
+.books_info{
+  margin-left:10px;
+}
+.books_info h4{
+  color:#CECECE;
+  font-size:16px;
+  margin-bottom:5px;
+}
+.books_info h4 span{
+  color:#6F6F6F;
+}
+h3.desc_title{
+  font-size:18px;
+  font-weight:normal;
+  margin-bottom:4px;
+}
+.book_description{
+  margin-top:10px;
 }

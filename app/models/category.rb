@@ -1,6 +1,6 @@
 class Category < ActiveRecord::Base
   
-  #associations:
+  # associations:
   has_many :books, :dependent => :nullify
   
   acts_as_tree :order => "title"
@@ -15,7 +15,9 @@ class Category < ActiveRecord::Base
   scope :mains, where("parent_id IS NULL")
   scope :childrens, where("parent_id IS NOT NULL")
   
+  # params:
   def to_param
     permalink
   end
+  
 end

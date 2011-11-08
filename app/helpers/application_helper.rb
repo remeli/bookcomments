@@ -65,4 +65,7 @@ module ApplicationHelper
     end
   end
   
+  def to_year(object)
+    object.year
+  end
 end

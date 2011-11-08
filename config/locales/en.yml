@@ -6,7 +6,7 @@ en:
   views:
     pagination:
       previous: "предыдущая"
-      next: "следующая"
+      next: "следующая →"
       truncate: "..."
   active_admin:
     dashboard: Dashboard

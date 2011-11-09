@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20111109171845) do
     t.string   "name"
     t.string   "email"
     t.text     "body"
+    t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

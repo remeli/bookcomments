@@ -1,4 +1,5 @@
 Bookcomments::Application.routes.draw do
+  
   # admin:
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -6,6 +7,7 @@ Bookcomments::Application.routes.draw do
   
   # categories:
   resources :categories, :only => [:index, :show] do  
+    # page kaminari:
     get ":id/page/:page.:format", :action => :show, :on => :collection, :defaults => { :format => "html"}
   end
   
@@ -13,6 +15,8 @@ Bookcomments::Application.routes.draw do
   resources :books, :only => [:index, :show] do
     resources :comments
   end
+  
+  # books:
   get "books/:id.:format" => "books#show", :as => :book_format , :defaults => { :format => "html"}
   
   # pages:

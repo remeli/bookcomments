@@ -16,7 +16,18 @@
 }
 #book-show .book-show-info{
   margin-left:15px;
+  margin-bottom:40px;
+}
+#book-show .book-show-info h1{
+  font-size:30px;
+  margin-bottom:20px;
 }
 #book-show .book-show-info h2{
-  font-size:18px;
+  font-size:16px;
+}
+#book-show .book-show-description{
+  margin-top:20px;
+}
+#sharing-social-network{
+  margin-top:20px;
 }

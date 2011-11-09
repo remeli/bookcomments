@@ -1,7 +1,4 @@
 Bookcomments::Application.routes.draw do
-
-  resources :comments
-
   # admin:
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -13,7 +10,9 @@ Bookcomments::Application.routes.draw do
   end
   
   # books:
-  resources :books, :only => [:index, :show]
+  resources :books, :only => [:index, :show] do
+    resources :comments
+  end
   get "books/:id.:format" => "books#show", :as => :book_format , :defaults => { :format => "html"}
   
   # pages:

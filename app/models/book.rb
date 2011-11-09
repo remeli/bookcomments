@@ -19,5 +19,10 @@ class Book < ActiveRecord::Base
       :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
   validates_attachment_size :cover, :less_than => 5.megabytes
   validates_attachment_content_type :cover, :content_type => ['image/jpeg', 'image/png', 'image/gif']
+
+  # params:
   
+  def to_param
+    title
+  end
 end

@@ -1,16 +1,19 @@
 Bookcomments::Application.routes.draw do
-  
-  resources :books
 
+  # admin:
   ActiveAdmin.routes(self)
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   
+  
+  # categories:
   resources :categories, :only => [:index, :show] do  
     get ":id/page/:page.:format", :action => :show, :on => :collection, :defaults => { :format => "html"}
   end
   
-
+  # books:
+  resources :books, :only => [:index, :show]
+  get "books/:id.:format" => "books#show", :as => :book_format , :defaults => { :format => "html"}
+  
   # pages:
   match "/about" => "pages#about"
   match "/contacts" => "pages#contacts"

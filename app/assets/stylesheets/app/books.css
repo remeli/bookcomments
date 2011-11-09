@@ -24,10 +24,25 @@
 }
 #book-show .book-show-info h2{
   font-size:16px;
+  color:#606060;
+}
+#book-show .book-show-info h2 span{
+  color:#000;
 }
 #book-show .book-show-description{
   margin-top:20px;
 }
 #sharing-social-network{
   margin-top:20px;
+}
+
+/* comments */
+#comments{
+  margin-top:20px;
+/*  border:1px solid #eee;*/
+  padding:5px;
+}
+#comments #comments-title{
+  font-size:16px;
+  font-weight:normal;
 }

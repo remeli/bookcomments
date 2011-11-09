@@ -7,7 +7,7 @@
     <h2 class="authorname">Автор: <span><%= @book.authorname %></span></h2>
     <h2 class="isbn">ISBN: <span><%= @book.isbn %></span></h2>
     <h2 class="year">Год выпуска: <span><%= @book.year %></span></h2>
-    <h2 class="category">Жанр: <span><%= @book.category.title %></span></h2>
+    <h2 class="category">Жанр: <span><%= link_to(@book.category.title, @book.category) %></span></h2>
   </div>
   <div class="row">
     <div class="twelve columns book-show-description">
@@ -16,7 +16,18 @@
   </div>
   <div class="row" id="sharing-social-network">
     <div class="twelve columns">
-      вконтакте
+      вконтакте facebook и тд
     </div>
+  </div>
+</div>
+<!-- comments -->
+<div class="row" id="comments">
+  <div class="twelve columns">
+    <h2 id="comments-title">Отзывы:</h2>
+  </div>
+  <div class="row comment">
+    <div class="twelve columns">
+      Комментарий
+    </div>    
   </div>
 </div>

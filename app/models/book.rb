@@ -1,6 +1,7 @@
 class Book < ActiveRecord::Base
 
   #associations:
+  has_many :comments, :dependent => :destroy
   belongs_to :category
   
   #validates:

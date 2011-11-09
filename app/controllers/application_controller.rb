@@ -6,5 +6,5 @@ class ApplicationController < ActionController::Base
   def load_categories
     @mains_categories = Category.mains
   end
-
+  
 end

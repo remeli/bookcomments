@@ -1,1 +1,22 @@
 /* books show*/
+#book-show{
+  margin-top:20px;
+  padding:5px;
+}
+#book-show .book-show-cover img{
+  width:186px;
+  height:275px;
+  box-shadow: 0 0 10px black; /* Параметры тени */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+}
+#book-show .book-show-cover img:hover{
+  opacity:0.8;
+}
+#book-show .book-show-info{
+  margin-left:15px;
+}
+#book-show .book-show-info h2{
+  font-size:18px;
+}

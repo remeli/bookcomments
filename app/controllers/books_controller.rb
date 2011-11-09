@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   
   def show
     @book = Book.find_by_title(params[:id])
-    @title = @book.title
+    @title = "Книги / " + @book.title
     @description = @book.description
   end
 end

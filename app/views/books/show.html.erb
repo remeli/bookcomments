@@ -1,3 +1,17 @@
-<div class="row">
-  
+<div class="row" id="book-show">
+  <div class="four columns book-show-cover">
+    <%= image_tag @book.cover.url(:medium) %>
+  </div>
+  <div class="eight columns book-show-info">
+    <h1 class="title"><span><%= @book.title %></span></h1>
+    <h2 class="authorname">Автор: <span><%= @book.authorname %></span></h2>
+    <h2 class="isbn">ISBN: <span><%= @book.isbn %></span></h2>
+    <h2 class="year">Год выпуска: <span><%= @book.year %></span></h2>
+    <h2 class="category">Жанр: <span><%= @book.category.title %></span></h2>
+  </div>
+  <div class="row">
+    <div class="twelve columns book-show-description">
+      <%= @book.description %>
+    </div>
+  </div>
 </div>

@@ -21,7 +21,10 @@ module ApplicationHelper
   def description
     base_description = site[:description]
     if @description
-      base_description + ", " + @description
+      desc = @description
+      if desc.length > 200
+        desc = truncate(desc, :length => 200)
+      end
     else
       base_description
     end

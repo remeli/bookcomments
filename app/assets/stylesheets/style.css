@@ -154,9 +154,8 @@ color: #ccc;
 
 /* footer */
 #footer{
-  height:200px;
+  height:180px;
   margin-top:20px;
-/*  border:1px solid #eee;*/
 }
 #footer .copyright{
   margin-left:0px;
@@ -184,4 +183,7 @@ color: #ccc;
 #links1Tab ul li a:hover{
   color:#9B9B9B;
   text-decoration:none;
+}
+.social-networks li img{
+  padding-right:5px;
 }

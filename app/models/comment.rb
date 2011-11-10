@@ -11,7 +11,13 @@ class Comment < ActiveRecord::Base
   validates :email, :presence => true,
                     :format => { :with => email_regex }
   validates :body, :presence => true
+  validates :plusminus, :presence => true,
+                        :inclusion => { :in => 0..2 }
+                        # 0 => netral
+                        # 1 => plus
+                        # 2 => minus
   
+                        
   # todo: сделать положительный отзыв или отрицательный
   # валидацию, js
 end

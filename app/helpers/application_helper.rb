@@ -75,4 +75,14 @@ module ApplicationHelper
   def to_date(object)
     object.created_at.to_date
   end
+  
+  def type_comment(comment)
+    type = comment.plusminus
+    case type
+      when 0 then "neitral"
+      when 1 then "plus"
+      when 2 then "minus"
+    end
+  end
+    
 end

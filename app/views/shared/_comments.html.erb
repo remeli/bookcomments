@@ -8,6 +8,14 @@
   <div class="twelve columns">
     <h1>Комментировать:</h1>
     <%= form_for([@book, @book.comments.new], :remote => true ,:html => {:class => "nice custom add_comment"}) do |f| %>
+      <div class="type-comment">
+        <%= f.label :plusminus, "Тип комментария:" %>
+        <select id="comment_plusminus" name="comment[plusminus]">
+          <option SELECTED value="1">Положительный</option>
+          <option value="2">Отрицательный</option>
+          <option value="0">Нейтральный</option>
+        </select>
+      </div>
       <div class="field">
         <%= f.label :name, "Имя:" %>
         <%= f.text_field :name, :class => "input-text required", :minlength => "2", :maxlength => "50" %>

@@ -13,7 +13,7 @@ class Comment < ActiveRecord::Base
   validates :body, :presence => true
   validates :plusminus, :presence => true,
                         :inclusion => { :in => 0..2 }
-                        # 0 => netral
+                        # 0 => neitral
                         # 1 => plus
                         # 2 => minus
   

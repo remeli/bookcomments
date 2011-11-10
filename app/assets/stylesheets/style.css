@@ -269,3 +269,8 @@ color: #ccc;
   border-radius:5px;
   -o-border-radius:5px;
 }
+#form_add_comment .type-comment{
+/*  border:1px solid #eee;*/
+  margin-top:20px;
+  margin-bottom:5px;
+}

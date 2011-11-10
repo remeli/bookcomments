@@ -4,7 +4,7 @@
     <h4 class="name-commentator"><%= comment.name %>:</h4>
     <div class="comment-date"><%= to_date(comment) %></div>
   </div>
-  <div class="comment-text">
+  <div class="comment-text <%= type_comment(comment) %>">
     <%= comment.body %>
   </div>
 </div>

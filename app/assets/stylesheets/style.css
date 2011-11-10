@@ -206,6 +206,21 @@ color: #ccc;
   margin-right:-10px;
   margin-top:10px;
 }
+#comments-title span{
+  font-size:11px;
+  float:right;
+  margin-top:4px;
+  margin-right:5px;
+  font-weight:bold;
+}
+#comments-title span a{
+  font-weight:normal;
+  color:#fff;
+  text-decoration:underline;
+}
+#comments-title span a:hover{
+  color:#E1E1E1;
+}
 #list-comments{
   padding:6px;
   margin-top:10px;

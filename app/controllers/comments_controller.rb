@@ -16,6 +16,30 @@ class CommentsController < ApplicationController
     end
   end
   
+  def plus
+    @comments = @book.comments.plustype
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+  
+  def minus
+    @comments = @book.comments.minustype
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+  
+  def neitral
+    @comments = @book.comments.neitraltype
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+  
   private
     def load_book
       @book = Book.find_by_title(params[:book_id])

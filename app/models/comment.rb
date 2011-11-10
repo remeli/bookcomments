@@ -18,6 +18,10 @@ class Comment < ActiveRecord::Base
                         # 2 => minus
   
                         
-  # todo: сделать положительный отзыв или отрицательный
-  # валидацию, js
+  # scope:
+  default_scope order("created_at ASC")
+  scope :neitraltype, where(:plusminus => 0)
+  scope :plustype, where(:plusminus => 1)
+  scope :minustype, where(:plusminus => 2)
+  
 end

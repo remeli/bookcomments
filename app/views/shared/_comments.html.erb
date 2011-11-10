@@ -1,4 +1,12 @@
-<h2 id="comments-title">Отзывы: (<%= @book.comments.size %>)</h2>
+<h2 id="comments-title">
+  Отзывы: (<%= @book.comments.size %>)
+  <span>
+    Показать только:
+    <a href="#">положительные</a> | 
+    <a href="#">отрицательные</a> |
+    <a href="#">нейтральные</a>
+  </span>
+</h2>
 <div class="row" id="list-comments">
   <div class="twelve columns">
     <%= render(@book.comments) %>    

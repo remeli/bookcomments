@@ -1,19 +1,7 @@
 <h2 id="comments-title">Отзывы: (<%= @book.comments.size %>)</h2>
 <div class="row" id="list-comments">
   <div class="twelve columns">
-    <% for comment in @book.comments %>
-      <div class="row comment" >
-        <div class="twelve columns">
-          <div class="head-comment">
-            <h4 class="name-commentator"><%= comment.name %>:</h4>
-            <div class="comment-date"><%= to_date(comment) %></div>
-          </div>
-          <div class="comment-text">
-            <%= comment.body %>
-          </div>
-        </div>
-      </div>
-    <% end %>    
+    <%= render(@book.comments) %>    
   </div>
 </div>
 <div class="row" id="form_add_comment">

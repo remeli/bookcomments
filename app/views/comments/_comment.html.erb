@@ -1,0 +1,11 @@
+<%= div_for comment, :class => "row" do %>
+<div class="twelve columns">
+  <div class="head-comment">
+    <h4 class="name-commentator"><%= comment.name %>:</h4>
+    <div class="comment-date"><%= to_date(comment) %></div>
+  </div>
+  <div class="comment-text">
+    <%= comment.body %>
+  </div>
+</div>
+<% end %>

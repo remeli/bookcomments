@@ -4,9 +4,15 @@ class CommentsController < ApplicationController
   def create
     @comment = @book.comments.new(params[:comment])
     if @comment.save
-      redirect_to @book, :notice => "Комментарий успешно добавлен"
+      respond_to do |format|
+        format.html { redirect_to @book, :notice => "Комментарий успешно добавлен" }
+        format.js
+      end
     else
-      redirect_to @book, :alert => "Комментарий не добавлен"
+      respond do |format|
+        format.html { redirect_to @book, :alert => "Комментарий не добавлен" }
+        format.js { render 'fail_create.js.erb' }
+      end
     end
   end
   

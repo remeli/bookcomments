@@ -212,11 +212,11 @@ color: #ccc;
   margin-bottom:10px;
 }
 #list-comments .comment{
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 .comment .head-comment{
   border-bottom:1px solid #eee;
-  padding-bottom:5px;
+  padding-bottom:8px;
 }
 .comment .name-commentator{
   float:left;

@@ -5,7 +5,8 @@ class Book < ActiveRecord::Base
   belongs_to :category
   
   #validates:
-  validates :title, :presence => true
+  validates :title, :presence => true,
+                    :uniqueness => true
   validates :year, :presence => true
   validates :authorname, :presence => true
   validates :category_id, :presence => true

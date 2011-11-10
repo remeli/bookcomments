@@ -15,6 +15,9 @@ Bookcomments::Application.routes.draw do
   resources :books, :only => [:index, :show] do
     resources :comments
   end
+
+  # comments
+
   
   # pages:
   match "/about" => "pages#about"

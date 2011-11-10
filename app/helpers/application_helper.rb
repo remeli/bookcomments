@@ -71,4 +71,8 @@ module ApplicationHelper
   def to_year(object)
     object.year
   end
+  
+  def to_date(object)
+    object.created_at.to_date
+  end
 end

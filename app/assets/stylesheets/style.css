@@ -196,6 +196,68 @@ color: #ccc;
 #comments-title{
   font-size:16px;
   font-weight:normal;
-  border:1px solid #ccc;
-  padding:5px;
+  padding:8px 5px 8px 5px;
+  background:#797979;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+  color:#fff;
+  margin-right:-10px;
+  margin-top:10px;
+}
+#list-comments{
+  padding:2px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#list-comments .comment{
+  margin-bottom:10px;
+}
+.comment .head-comment{
+  border-bottom:1px solid #eee;
+  padding-bottom:5px;
+}
+.comment .name-commentator{
+  float:left;
+  font-size:18px;
+  color:#757575;
+  margin-right:10px;
+  font-weight:normal;
+}
+.comment .comment-date{
+  font-size:9px;
+  padding-top:1px;
+  margin-left:5px;
+  color:#ccc;
+  text-align:right;
+}
+.comment .comment-date:hover{
+  color:#858585;
+}
+.comment .comment-text{
+  clear:both;
+  padding-top:5px;
+  padding-left:10px;
+}
+/* comment add form */
+#form_add_comment{
+  padding:5px 10px 5px 10px;
+}
+#form_add_comment .field{
+  margin-bottom:20px;
+}
+#form_add_comment label{
+  font-size:14px;
+  margin-bottom:15px;
+  line-height:15px;
+}
+#form_add_comment textarea{
+  width:390px;
+  height:150px;
+}
+#form_add_comment h1{
+  font-size:18px;
+  margin-left:-10px;
+  font-weight:normal;
 }

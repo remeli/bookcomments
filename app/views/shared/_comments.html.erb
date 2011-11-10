@@ -1,15 +1,40 @@
-<h2 id="comments-title">Отзывы:</h2>
-<div class="row">
-  <div class="twelve list-comments">
+<h2 id="comments-title">Отзывы: (<%= @book.comments.size %>)</h2>
+<div class="row" id="list-comments">
+  <div class="twelve columns">
     <% for comment in @book.comments %>
       <div class="row comment" >
         <div class="twelve columns">
-          <h4><%= comment.name %></h4>
-          <p>
+          <div class="head-comment">
+            <h4 class="name-commentator"><%= comment.name %>:</h4>
+            <div class="comment-date"><%= to_date(comment) %></div>
+          </div>
+          <div class="comment-text">
             <%= comment.body %>
-          </p>
+          </div>
         </div>
       </div>
     <% end %>    
+  </div>
+</div>
+<div class="row" id="form_add_comment">
+  <div class="twelve columns">
+    <h1>Комментировать:</h1>
+    <%= form_for([@book, @book.comments.new], :html => {:class => "nice custom"}) do |f| %>
+      <div class="field">
+        <%= f.label :name, "Имя:" %>
+        <%= f.text_field :name, :class => "input-text" %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "E-mail:" %>
+        <%= f.text_field :email, :class => "input-text" %>
+      </div>
+      <div class="field">
+        <%= f.label :body, "Комментарий:" %>
+        <%= f.text_area :body %>
+      </div>
+      <div class="field">
+        <%= f.submit "Добавить комментарий", :class => "nice small radius white button" %>
+      </div>
+    <% end %>
   </div>
 </div>

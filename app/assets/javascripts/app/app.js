@@ -96,6 +96,7 @@ $(document).ready(function(){
 });
 
 //active tree menu href
+// todo: активное меню не работает!
 $(document).ready(function(){
   var name = document.location.href;
   var active = new Array();
@@ -108,5 +109,4 @@ $(document).ready(function(){
 // check form comments
 $(document).ready(function(){
   var validator = $('#new_comment').validate();
-  validator.showErrors({"comment_name": "I know that your firstname is Pete, Pete!"});
 });

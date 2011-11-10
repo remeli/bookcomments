@@ -104,3 +104,9 @@ $(document).ready(function(){
     $("a[href='/categories/"+active[4]+"']").addClass("active_category")
   });
 });
+
+// check form comments
+$(document).ready(function(){
+  var validator = $('#new_comment').validate();
+  validator.showErrors({"comment_name": "I know that your firstname is Pete, Pete!"});
+});

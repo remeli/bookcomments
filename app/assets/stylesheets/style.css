@@ -255,9 +255,21 @@ color: #ccc;
 #form_add_comment textarea{
   width:390px;
   height:150px;
+  clear:both;
 }
 #form_add_comment h1{
   font-size:18px;
   margin-left:-10px;
   font-weight:normal;
+}
+/* comments check*/
+#form_add_comment label.error{
+  background:#F4E1E1;
+  color:#672432;
+  width:252px;
+  padding:6px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
 }

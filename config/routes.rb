@@ -16,9 +16,6 @@ Bookcomments::Application.routes.draw do
     resources :comments
   end
   
-  # books:
-  get "books/:id.:format" => "books#show", :as => :book_format , :defaults => { :format => "html"}
-  
   # pages:
   match "/about" => "pages#about"
   match "/contacts" => "pages#contacts"

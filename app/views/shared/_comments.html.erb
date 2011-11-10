@@ -19,7 +19,7 @@
 <div class="row" id="form_add_comment">
   <div class="twelve columns">
     <h1>Комментировать:</h1>
-    <%= form_for([@book, @book.comments.new], :html => {:class => "nice custom"}) do |f| %>
+    <%= form_for([@book, @book.comments.new], :remote => true ,:html => {:class => "nice custom"}) do |f| %>
       <div class="field">
         <%= f.label :name, "Имя:" %>
         <%= f.text_field :name, :class => "input-text" %>

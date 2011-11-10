@@ -310,3 +310,23 @@ color: #ccc;
   margin-top:20px;
   margin-bottom:5px;
 }
+
+
+/* index page */
+#main-page .last-ten-books .title{
+  font-size:25px;
+  font-weight:normal;
+  margin-bottom:15px;
+}
+.last-ten-books img{
+  margin-right:5px;
+  width:115px;
+  height:170px;
+  box-shadow: 0 0 5px black; /* Параметры тени */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+}
+.last-ten-books img:hover{
+  opacity:0.8;
+}

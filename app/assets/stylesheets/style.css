@@ -207,21 +207,17 @@ color: #ccc;
   margin-top:10px;
 }
 #list-comments{
-  padding:2px;
+  padding:6px;
   margin-top:10px;
   margin-bottom:10px;
 }
 #list-comments .comment{
   margin-bottom:12px;
 }
-.comment .head-comment{
-  border-bottom:1px solid #eee;
-  padding-bottom:8px;
-}
 .comment .name-commentator{
   float:left;
-  font-size:18px;
-  color:#757575;
+  font-size:16px;
+  color:#000;
   margin-right:10px;
   font-weight:normal;
 }
@@ -230,15 +226,15 @@ color: #ccc;
   padding-top:1px;
   margin-left:5px;
   color:#ccc;
-  text-align:right;
 }
 .comment .comment-date:hover{
   color:#858585;
 }
 .comment .comment-text{
+  color:#666;
   clear:both;
-  padding-top:5px;
-  padding-left:10px;
+  padding-top:2px;
+  border-top:1px solid #eee;
 }
 /* comment add form */
 #form_add_comment{

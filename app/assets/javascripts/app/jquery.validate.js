@@ -265,9 +265,9 @@ $.extend($.validator, {
 	},
 
 	messages: {
-		required: "Это обязательное поле",
+		required: "Это обязательное поле.",
 		remote: "Please fix this field.",
-		email: "Введите корректный e-mail адресс",
+		email: "Введите корректный e-mail адресс.",
 		url: "Please enter a valid URL.",
 		date: "Please enter a valid date.",
 		dateISO: "Please enter a valid date (ISO).",

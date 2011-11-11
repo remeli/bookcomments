@@ -1,11 +1,11 @@
 ActiveAdmin.register Book do
-  before_filter do
-    Book.class_eval do
-      def to_param
-        id.to_s
-      end
-    end
-  end
+  # before_filter do
+  #   Book.class_eval do
+  #     def to_param
+  #       id.to_s
+  #     end
+  #   end
+  # end
   
   menu :priority => 2, :label => "Книги"
   index do

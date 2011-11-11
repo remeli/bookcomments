@@ -11,7 +11,6 @@ class Book < ActiveRecord::Base
   validates :authorname, :presence => true
   validates :category_id, :presence => true
   
-  
   #scope
   default_scope order("created_at DESC")
   
@@ -23,38 +22,38 @@ class Book < ActiveRecord::Base
   validates_attachment_content_type :cover, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
   
-  # # model methods
-  #      after_validation :change_permalink
-  # 
-  #      
-  #      def change_permalink
-  #        self.permalink = operation_with_title(title)
-  #      end
-  #      
-  #      def operation_with_title(string)
-  #        title = string
-  #        title.delete!(".,?!()@#$&*-+=`~''\"")
-  #        new_string = []
-  #        title.each_char do |c|
-  #          new_string << translit[c]
-  #        end
-  #        new_string.to_s
-  #      end
-  #      
-  #      def translit
-  #        {
-  #          "а" => "a", "б" => "b", "в" => "v",
-  #          "г" => "g", "д" => "d", "е" => "e",
-  #          "ё" => "jo", "ж" => "zh", "з" => "z",
-  #          "и" => "i", "й" => "ij", "к" => "k",
-  #          "л" => "l", "м" => "m", "н" => "n",
-  #          "о" => "o", "п" => "p", "р" => "r",
-  #          "с" => "s", "т" => "t", "у" => "u",
-  #          "ф" => "f", "х" => "h", "ц" => "c",
-  #          "ч" => "ch", "ш" => "sh", "щ" => "xh",
-  #          "ь" => "", "ы" => "y", "ъ" => "",
-  #          "э" => "je", "ю" => "ju", "я" => "ja",
-  #          " " => "_"
-  #        }
-  #      end
+  # model methods
+   after_validation :change_permalink
+   
+   
+   def change_permalink
+     self.permalink = operation_with_title(title)
+   end
+   
+   def operation_with_title(string)
+     title = string
+     title.delete!(".,?!()@#$&*-+=`~''\"")
+     new_string = []
+     title.each_char do |c|
+       new_string << translit[c]
+     end
+     new_string.to_s
+   end
+   
+   def translit
+     {
+       "а" => "a", "б" => "b", "в" => "v",
+       "г" => "g", "д" => "d", "е" => "e",
+       "ё" => "jo", "ж" => "zh", "з" => "z",
+       "и" => "i", "й" => "ij", "к" => "k",
+       "л" => "l", "м" => "m", "н" => "n",
+       "о" => "o", "п" => "p", "р" => "r",
+       "с" => "s", "т" => "t", "у" => "u",
+       "ф" => "f", "х" => "h", "ц" => "c",
+       "ч" => "ch", "ш" => "sh", "щ" => "xh",
+       "ь" => "", "ы" => "y", "ъ" => "",
+       "э" => "je", "ю" => "ju", "я" => "ja",
+       " " => "_"
+     }
+   end
 end

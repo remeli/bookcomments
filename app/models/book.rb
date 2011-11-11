@@ -24,10 +24,10 @@ class Book < ActiveRecord::Base
   
   # model methods
    after_validation :change_permalink
-   
+   # todo: activeadmin не делает after_validation
    
    def change_permalink
-     self.permalink = operation_with_title(title)
+     self.authorname = operation_with_title(title)
    end
    
    def operation_with_title(string)

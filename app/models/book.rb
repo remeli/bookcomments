@@ -1,5 +1,7 @@
 class Book < ActiveRecord::Base  
 
+  attr_accessor :permalink
+
   #associations:
   has_many :comments, :dependent => :destroy
   belongs_to :category
@@ -24,15 +26,18 @@ class Book < ActiveRecord::Base
   
   # model methods
    after_validation :change_permalink
+   
    # todo: activeadmin не делает after_validation
    
+   private
+   
    def change_permalink
-     self.authorname = operation_with_title(title)
+     self.permalink = operation_with_title(title)
    end
    
    def operation_with_title(string)
      title = string
-     title.delete!(".,?!()@#$&*-+=`~''\"")
+     title.delete!(".,?!()@#$&*-+=/\\[]{}<>`~''\"")
      new_string = []
      title.each_char do |c|
        new_string << translit[c]

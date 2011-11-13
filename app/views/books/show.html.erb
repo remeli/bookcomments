@@ -1,6 +1,6 @@
 <div class="row" id="book-show">
   <div class="four columns book-show-cover">
-    <%= image_tag @book.cover.url(:medium) %>
+    <%= image_tag @book.cover.url(:medium), :title => @book.title %>
   </div>
   <div class="eight columns book-show-info">
     <h1 class="title"><span><%= @book.title %></span></h1>

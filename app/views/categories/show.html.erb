@@ -7,7 +7,7 @@
   </div>
   <div class="row">
     <div class="three columns book_cover">
-      <%= image_tag(book.cover.url(:thumb)) %>
+      <%= image_tag(book.cover.url(:thumb), :title => book.title) %>
     </div>
     <div class="nine columns books_info">
       <h4 class="authorname">

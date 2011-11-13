@@ -1,5 +1,6 @@
 class Book < ActiveRecord::Base  
-
+  # todo: прикрутить рейтинг
+  
   attr_accessor :permalink
 
   #associations:

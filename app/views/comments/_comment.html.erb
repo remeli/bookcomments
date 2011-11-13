@@ -1,0 +1,11 @@
+<div id="comment_<%= comment.id %>" class="row comment">
+    <div class="twelve columns">
+      <div class="head-comment">
+        <h4 class="name-commentator <%= type_comment(comment) %>"><%= comment.name %>:</h4>
+        <div class="comment-date"><%= to_date(comment) %></div>
+      </div>
+      <div class="comment-text">
+        <%= comment.body %>
+      </div>
+    </div>
+  </div>

@@ -2,3 +2,4 @@ $('#list-comments').append("<%= escape_javascript(render(@comment)) %>");
 $('#comment_<%=@comment.id%>').hide();
 $('#comment_<%=@comment.id%>').slideDown('slow');
 $('#new_comment')[0].reset();
+// TODO: не работает, добавить старый comment!

@@ -24,5 +24,4 @@ class Comment < ActiveRecord::Base
   scope :plustype, where(:plusminus => 1)
   scope :minustype, where(:plusminus => 2)
   
-  # todo: сделать показывать js
 end

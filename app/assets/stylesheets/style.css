@@ -343,7 +343,7 @@ color: #ccc;
 #books-index-page .book-index-one{
   float:left;
   width:20%;
-  margin-bottom:20px;
+  margin-top:20px;
 }
 .book-index-one img{
   margin-right:5px;
@@ -364,4 +364,38 @@ color: #ccc;
   font-size:11px;
   font-weight:normal;
   margin-bottom:2px;
+}
+
+/* paginate */
+#paginate_block{
+  margin-top:20px;
+}
+
+#paginate_block span{
+  display:inline-block;
+  margin-right:5px; 
+  background:#2a85e8;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+  font-weight:bold;
+  color:#000;
+}
+#paginate_block a{
+  color:#fff;
+  display:block;
+  padding:5px 10px 5px 10px;
+}
+#paginate_block .current{
+  padding:5px 10px 5px 10px;
+}
+#paginate_block .next{
+  padding:5px 10px 5px 10px;
+}
+#paginate_block .next a{
+  padding:0;
+}
+#paginate_block a:hover{
+  color:#C7C7C7;
 }

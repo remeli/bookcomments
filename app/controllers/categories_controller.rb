@@ -1,5 +1,9 @@
 class CategoriesController < ApplicationController
   
+  def index
+
+  end
+  
   def show
     # base:
     @category = Category.find_by_permalink(params[:id])

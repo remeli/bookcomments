@@ -69,7 +69,7 @@ module ApplicationHelper
   end
   
   def to_year(object)
-    object.year
+    object.year.year
   end
   
   def to_date(object)

@@ -1,0 +1,19 @@
+<div class="row" id="books-index-page">
+  <div class="twelve columns">
+    <% for book in @books %>
+      <div class="book-index-one">
+        <%= link_to(image_tag(book.cover.url(:thumb)), book) %>
+        <div class="book-index-one-desc">
+          <h1><%= link_to(book.title, book) %></h1>
+          <h1><%= to_year(book) %></h1>
+          <h1><%= link_to(book.category.title, book.category) %></h1>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="row" id="paginate_block">
+  <div class="twelve columns">
+    <%= paginate @books %>
+  </div>
+</div>

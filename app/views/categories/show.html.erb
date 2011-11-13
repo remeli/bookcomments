@@ -17,7 +17,7 @@
         ISBN: <span><%= book.isbn %></span>
       </h4>
       <h4 class="year">
-        Год выпуска: <span><%= to_year(book.year) %></span>
+        Год выпуска: <span><%= to_year(book) %></span>
       </h4>
       <h4 class="category">
         Жанр: <span><%= link_to book.category.title, book.category %></span>

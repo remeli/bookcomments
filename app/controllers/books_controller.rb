@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   
   def index
     @title = "Книги"
-    @books = Book.all
+    @books = Book.page(params[:page]).per(10)
   end
   
   def show

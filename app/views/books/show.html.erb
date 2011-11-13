@@ -6,7 +6,7 @@
     <h1 class="title"><span><%= @book.title %></span></h1>
     <h2 class="authorname">Автор: <span><%= @book.authorname %></span></h2>
     <h2 class="isbn">ISBN: <span><%= @book.isbn %></span></h2>
-    <h2 class="year">Год выпуска: <span><%= @book.year %></span></h2>
+    <h2 class="year">Год выпуска: <span><%= to_year(@book) %></span></h2>
     <h2 class="category">Жанр: <span><%= link_to(@book.category.title, @book.category) %></span></h2>
   </div>
   <div class="row">

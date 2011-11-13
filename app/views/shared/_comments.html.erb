@@ -1,15 +1,15 @@
 <h2 id="comments-title">
-  Отзывы: (<%= @book.comments.size %>)
+  Отзывы: (<%= link_to @book.comments.size, @book, :class => "allcomments-title", :title => "Все отзывы" %>)
   <span>
     Показать только:
-    <a href="#">положительные</a> | 
-    <a href="#">отрицательные</a> |
-    <a href="#">нейтральные</a>
+    <%= link_to "положительные", plus_book_path(@book) %> | 
+    <%= link_to "отрицательные", minus_book_path(@book) %> |
+    <%= link_to "нейтральные", neitral_book_path(@book) %>
   </span>
 </h2>
 <div class="row" id="list-comments">
   <div class="twelve columns">
-    <%= render(@book.comments) %>    
+    <%= render('comments/bookcomments') %>
   </div>
 </div>
 <div class="row" id="form_add_comment">

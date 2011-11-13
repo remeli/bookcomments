@@ -14,6 +14,12 @@ Bookcomments::Application.routes.draw do
   # books:
   resources :books, :only => [:index, :show] do
     resources :comments
+    member do
+      get :plus
+      get :minus
+      get :neitral
+    end
+    
   end
 
   # comments

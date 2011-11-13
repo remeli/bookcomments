@@ -1,4 +1,7 @@
 /* Copyright 2011. Kussainov Yerlan. Remeli.kz */
+.container{
+  clear:both;
+}
 #header{
   height:80px;
   font-family:Arial,Tahoma,sans-serif;
@@ -374,7 +377,7 @@ color: #ccc;
 #paginate_block span{
   display:inline-block;
   margin-right:5px; 
-  background:#2a85e8;
+  background:#606060;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
   border-radius:5px;
@@ -398,4 +401,56 @@ color: #ccc;
 }
 #paginate_block a:hover{
   color:#C7C7C7;
+}
+
+/*genre head menu*/
+#genre-head-menu{
+  border-bottom:1px solid #ccc;
+  height:25px;
+  background:#494949;
+  box-shadow: 0 0 8px black; /* Параметры тени */
+  box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+/*  background:#3F3F3F;*/
+}
+#genre-head-menu ul{
+  max-width: 850px;
+  min-width: 727px;
+  width: 100%;
+  margin:0 auto;
+}
+#genre-head-menu ul li{
+  float:left;
+}
+#genre-head-menu ul li a{
+  color:#DADADA;
+  display:block;
+  padding:3px 25px 3px 25px;
+  font-size:11px;
+}
+#genre-head-menu ul li a:hover{
+  text-decoration:underline;
+  color:#fff;
+}
+#footer #developer {
+float: right;
+margin-top: 10px;
+padding: 5px;
+width: 95px;
+-webkit-border-radius: 5px 0px 0px 5px;
+-moz-border-radius: 5px 0px 0px 5px;
+border-radius: 5px 0px 0px 5px;
+background: #F3F3F3;
+color: #3b3b3b;
+text-align: left;
+font-size: 11px;
+-o-border-radius: 5px 0px 0px 5px;
+}
+#footer #developer a {
+color: #3b3b3b;
+text-decoration: none;
+}
+#footer #developer .first {
+color: #922;
 }

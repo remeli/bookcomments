@@ -5,6 +5,17 @@
   <%= render("layouts/head") %>
 </head>
 <body>
+  <div id="genre-head-menu" class="nice">
+    <ul>
+      <li><%= link_to "Главная", root_path %></li>
+      <li><%= link_to "Жанры", categories_path %></li>
+      <li><%= link_to "Что почитать?", "" %></li>
+      <li><%= link_to "TOP-20 по комментариям", "" %></li>
+      <li><%= link_to "TOP-20 по оценкам", "" %></li>
+      <li><%= link_to "Новинки", "" %></li>
+      <li><%= link_to "Архив", "" %></li>
+    </ul>
+  </div>
   <div class="container">
     <%= render('layouts/header') %>
     <%= render('layouts/menu') %>

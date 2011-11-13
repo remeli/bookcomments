@@ -20,6 +20,7 @@ Bookcomments::Application.routes.draw do
       get :minus
       get :neitral
     end
+    get "page/:page.:format", :action => :index, :on => :collection, :defaults => { :format => "html"}
   end
 
   # comments

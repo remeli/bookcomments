@@ -4,6 +4,7 @@ ActiveAdmin.register Author do
     column :id
     column :name
     column :year_born
+    default_actions
   end
   
   form do |f|

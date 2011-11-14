@@ -24,7 +24,7 @@ ActiveAdmin.register Book do
       f.input :title, :label => "Название"
       f.input :authorname, :label => "Имя автора:"
       f.inputs "Автор из списка:" do
-        f.collection_select :author_id, Author.all(:order => "name"), :id, :name
+        f.collection_select :author_id, Author.all(:order => "name"), :id, :name, :include_blank => true
       end
       f.input :year, :as => :date,:start_year => Date.today.year-90, :end_year => Date.today.year+6, :discard_month => true, :discard_day => true, :label => "Год выпуска:"
       f.input :cover, :as => :file, :label => "Фотография"

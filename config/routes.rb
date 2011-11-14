@@ -25,8 +25,10 @@ Bookcomments::Application.routes.draw do
     get "page/:page.:format", :action => :index, :on => :collection, :defaults => { :format => "html"}
   end
 
-  # comments
-
+  # authors
+  resources :authors, :only => [:index, :show] do
+    get "page/:page.:format", :action => :index, :on => :collection, :defaults => { :format => "html"}
+  end
   
   # pages:
   match "/about" => "pages#about"

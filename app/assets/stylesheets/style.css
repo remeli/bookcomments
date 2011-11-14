@@ -406,7 +406,7 @@ color: #ccc;
 /*genre head menu*/
 #genre-head-menu{
   border-bottom:1px solid #ccc;
-  height:25px;
+  height:30px;
   background:#494949;
   box-shadow: 0 0 8px black; /* Параметры тени */
   box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Параметры тени */
@@ -415,7 +415,7 @@ color: #ccc;
 /*  background:#3F3F3F;*/
 }
 #genre-head-menu ul{
-  max-width: 850px;
+  max-width: 860px;
   min-width: 727px;
   width: 100%;
   margin:0 auto;
@@ -426,7 +426,8 @@ color: #ccc;
 #genre-head-menu ul li a{
   color:#DADADA;
   display:block;
-  padding:3px 20px 3px 20px;
+  font-weight:bold;
+  padding:6px 20px 3px 20px;
   font-size:11px;
 }
 #genre-head-menu ul li a:hover{

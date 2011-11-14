@@ -4,6 +4,10 @@
 #contacts-page h2{
   font-size:18px;
 }
+#contacts-page h1{
+  font-size:34px;
+  margin-bottom:30px;
+}
 #contacts-page h1#site-developer{
   margin-top:60px;
   font-size:30px;

@@ -21,7 +21,7 @@ ActiveAdmin.register Book do
       f.inputs "Категории" do
         f.collection_select :category_id, Category.childrens(:order => "title"), :id, :title
       end
-      f.input :title, :label => "Название"
+      f.input :title, :label => "Название книги"
       f.input :authorname, :label => "Имя автора:"
       f.inputs "Автор из списка:" do
         f.collection_select :author_id, Author.all(:order => "name"), :id, :name, :include_blank => true

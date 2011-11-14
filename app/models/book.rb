@@ -3,7 +3,8 @@ class Book < ActiveRecord::Base
   
   has_many :comments, :dependent => :destroy
   belongs_to :category
-
+  belongs_to :author
+  
   validates :title, :presence => true,
                     :uniqueness => true
   validates :year, :presence => true

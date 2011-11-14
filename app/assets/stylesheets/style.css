@@ -338,7 +338,7 @@ color: #ccc;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
 }
 .last-ten-books img:hover{
-  opacity:0.8;
+  opacity:0.9;
 }
 
 /* books index */
@@ -358,7 +358,7 @@ color: #ccc;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */ 
 }
 .book-index-one a img:hover{
-  opacity:0.8;
+  opacity:0.9;
 }
 .book-index-one .book-index-one-desc{
   padding:4px;

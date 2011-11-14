@@ -1,0 +1,11 @@
+<div class="row" id="author-show-page">
+  <div class="twelve columns">
+    <h1 class="name-author"><%= @author.name %></h1>
+    <div class="photo-author">
+      <%= image_tag @author.photo.url(:medium), :title => @author.name %>
+    </div>
+    <div class="description-author">
+      <%= @author.description %>
+    </div>
+  </div>
+</div>

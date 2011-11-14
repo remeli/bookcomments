@@ -1,0 +1,15 @@
+#contacts-page{
+  padding:5px;
+}
+#contacts-page h2{
+  font-size:18px;
+}
+#contacts-page h1#site-developer{
+  margin-top:60px;
+  font-size:30px;
+  font-weight:normal;
+  background:#D0D0D0;
+  padding:2px;
+  color:#fff;
+  width:360px;
+}

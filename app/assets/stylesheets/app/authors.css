@@ -21,5 +21,26 @@
   -o-border-radius:5px;
 }
 .author-item a img:hover{
-  opacity:0.8;
+  opacity:0.9;
+}
+
+/*show author*/
+#author-show-page{
+/*  border:1px solid #ccc;*/
+}
+#author-show-page .name-author{
+  font-size:22px;
+}
+#author-show-page .photo-author img{
+  box-shadow: 0 0 5px black; /* Параметры тени */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+  margin:5px 0px 10px 10px;
+}
+#author-show-page .photo-author img:hover{
+  opacity:0.9;
+}
+#author-show-page .description-author{
+  margin-top:5px;
 }

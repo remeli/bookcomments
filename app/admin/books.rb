@@ -15,6 +15,7 @@ ActiveAdmin.register Book do
     column :authorname
     default_actions
   end
+  
   form do |f|
     f.inputs "Детали" do
       f.inputs "Категории" do

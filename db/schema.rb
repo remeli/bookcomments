@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111112135505) do
+ActiveRecord::Schema.define(:version => 20111110153720) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(:version => 20111112135505) do
     t.string   "cover_content_type"
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
-    t.string   "permalink"
   end
 
   create_table "categories", :force => true do |t|

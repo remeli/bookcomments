@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   def index
     @title = "Авторы"
-    @authors = Author.page(params[:page]).per(10)
+    @authors = Author.page(params[:page]).per(12)
   end
   
   def show

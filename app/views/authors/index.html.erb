@@ -1,0 +1,15 @@
+<div class="row" id="authors-list">
+  <div class="twelve columns">
+    <% @authors.each do |author| %>
+      <div class="author-item">
+        <h1><%= link_to(author.name, author) %></h1>
+        <%= link_to(image_tag(author.photo.url(:thumb)), author) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="row" id="paginate_block">
+  <div class="twelve columns">
+    <%= paginate @authors %>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+#authors-list .author-item{
+  float:left;
+  position:relative;
+  margin-bottom:20px;
+  width:25%;
+}
+.author-item h1{
+  font-size:12px;
+  font-weight:normal;
+}
+.author-item img{
+  width:100px;
+  height:105px;
+  box-shadow: 0 0 5px black; /* Параметры тени */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+}
+.author-item a img:hover{
+  opacity:0.8;
+}

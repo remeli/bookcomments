@@ -3,7 +3,6 @@ ActiveAdmin.register Author do
   index do
     column :id
     column :name
-    column :year_born
     default_actions
   end
   
@@ -11,8 +10,6 @@ ActiveAdmin.register Author do
     f.inputs "Детали" do
       f.input :name, :label => "Имя:"
       f.input :photo, :as => :file, :label => "Фотография:"
-      f.input :year_born, :as => :date,:start_year => Date.today.year-90, :end_year => Date.today.year+6, :discard_month => true, :discard_day => true, :label => "Год рождения:"
-      f.input :year_death, :as => :date,:start_year => Date.today.year-90, :end_year => Date.today.year+6, :discard_month => true, :discard_day => true, :label => "Год смерти:"
       f.input :description, :label => "Описание:"
     end
     f.buttons

@@ -109,3 +109,4 @@ $(document).ready(function(){
 $(document).ready(function(){
   var validator = $('#new_comment').validate();
 });
+

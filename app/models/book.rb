@@ -19,7 +19,7 @@ class Book < ActiveRecord::Base
   validates_attachment_content_type :cover, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   
   # before_save :change_permalink
-  #   before_update :change_permalink
+  # before_update :change_permalink
   
   # private
   #  

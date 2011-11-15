@@ -1,0 +1,16 @@
+<% for category in @mains_categories %>
+  <% if isset_subcat?(category) %>
+    <div class="block-genre-index">
+      <div class="genre-title-index">
+        <%= category.title %>
+      </div>
+      <%= raw(find_all_subcategories(category)) %>        
+    </div>
+  <% else %>
+    <div class="block-genre-index">
+      <div class="genre-title-index">
+        <%= link_to category.title, category, :title => category.description %>
+      </div>
+    </div>  
+  <% end %>
+<% end %>

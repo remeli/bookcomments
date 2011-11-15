@@ -1,7 +1,9 @@
 class CategoriesController < ApplicationController
   
   def index
-
+    @title = "Список жанров"
+    @description = "Список жанров книг"
+    render :layout => 'categoryindex'
   end
   
   def show

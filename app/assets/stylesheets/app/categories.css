@@ -35,3 +35,14 @@ h3.desc_title{
 .book_description{
   margin-top:10px;
 }
+
+
+/* layouts categories*/
+#categories-layout{
+  padding:5px;
+  max-width: 970px;
+  min-width: 700px;
+}
+.block-genre-index{
+  float:left;
+}

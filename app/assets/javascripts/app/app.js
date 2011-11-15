@@ -74,7 +74,8 @@ $(document).ready(function() {
 $(document).ready(function(){
  $("#menutree").treeview({
 		animated: "fast",
-    persist: "cookie",
+		persist: "location"
+    // persist: "cookie"
  });
 });
 $(document).ready(function(){

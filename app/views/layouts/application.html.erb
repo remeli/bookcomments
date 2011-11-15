@@ -36,7 +36,15 @@
         </div>
         <div class="row sidebar-block">
           <div class="twelve columns">
-            <h1 class="sidebar-title">Авторы</h1>
+            <h1 class="sidebar-title">Случайные авторы</h1>
+            <div class="authors-block-index">
+              <% @rand_authors.each do |author| %>
+                <div class="author-photo-index">
+                  <%= link_to(image_tag(author.photo.url(:thumb), :title => author.name), author) %>
+                </div>
+              <% end %>
+              <div class="clear"></div>
+            </div>
           </div>
         </div>
       </div>

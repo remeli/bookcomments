@@ -441,6 +441,7 @@ width: 95px;
 -webkit-border-radius: 5px 0px 0px 5px;
 -moz-border-radius: 5px 0px 0px 5px;
 border-radius: 5px 0px 0px 5px;
+-o-border-radius:5px 0px 0px 5px;
 background: #F3F3F3;
 color: #3b3b3b;
 text-align: left;
@@ -453,4 +454,25 @@ text-decoration: none;
 }
 #footer #developer .first {
 color: #922;
+}
+
+/* index-page: authors block */
+.authors-block-index{
+  padding-left:15px;
+}
+.author-photo-index{
+  float:left;
+}
+.author-photo-index img{
+  width:50px;
+  height:50px;
+  margin:1px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  -o-border-radius:5px;
+}
+.author-photo-index a img:hover{
+  opacity:0.9;
+  
 }

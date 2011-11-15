@@ -1,5 +1,9 @@
 Bookcomments::Application.routes.draw do
   
+  resources :articlecategories
+
+  resources :articles
+
   # admin:
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config

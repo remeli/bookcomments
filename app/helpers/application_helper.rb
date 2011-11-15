@@ -62,6 +62,29 @@ module ApplicationHelper
     end
   end
   
+  def find_all_genres(category)
+    if category.children.size > 0
+      ret = "<ul>"
+      category.children.each do |subcat|
+       if subcat.children.size > 0
+         ret += "<li>"
+         ret += "<span>"
+         ret += link_to(subcat.title, subcat)
+         ret += "</span>"
+         find_all_categories(subcat)
+         ret += "</li>"
+       else
+         ret += "<li>"
+         ret += "<span>"
+         ret += link_to(subcat.title, subcat)
+         ret += "</span>"
+         ret += "</li>"
+       end
+      end
+      ret += "</ul>"
+    end
+  end
+  
   def isset_subcat?(object)
     if object.children.size > 0
       true

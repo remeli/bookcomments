@@ -43,6 +43,36 @@ h3.desc_title{
   max-width: 970px;
   min-width: 700px;
 }
-.block-genre-index{
+#categories-layout h1.genre-title{
+  font-size:30px;
+  font-weight:normal;
+  padding-left:10px;
+}
+#categories-layout .block-genre-index{
   float:left;
+  margin:10px;
+  min-height:250px;
+  padding:5px;
+  width:210px;
+  border:1px solid #ddd;
+}
+#categories-layout .block-genre-index:hover{
+  border:1px solid #eee;
+}
+#categories-layout .genre-title-index{
+  font-size:14px;
+  margin-bottom:0px;
+/*  height:40px;*/
+/*  border:1px solid #ccc;*/
+}
+#categories-layout .block-genre-index ul{
+  margin-top:10px;
+}
+
+#categories-layout .block-genre-index ul li{
+  margin-left:5px;
+  margin-bottom:2px;
+}
+#categories-layout .block-genre-index ul li a:hover{
+  color:#000;
 }

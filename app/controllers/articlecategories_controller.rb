@@ -1,5 +1,8 @@
 class ArticlecategoriesController < ApplicationController
+  
   def show
-    @articlecategory = Article.find_by_permalink(params[:id])
+    @articlecategory = Articlecategory.find_by_permalink(params[:id])
+    @articles = @articlecategory.articles.page(params[:page]).per(7)
+    @title = @articlecategory.title
   end
 end

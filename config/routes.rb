@@ -1,8 +1,8 @@
-Bookcomments::Application.routes.draw do
+Bookcomments::Application.routes.draw do 
   
-  resources :articlecategories
-
-  resources :articles
+  resources :articles, :only => [:index, :show]
+  
+  match "/pages/:id" => "articlecategories#show", :as => "articlecategory"
 
   # admin:
   ActiveAdmin.routes(self)
@@ -14,7 +14,6 @@ Bookcomments::Application.routes.draw do
     # page kaminari:
     get ":id/page/:page.:format", :action => :show, :on => :collection, :defaults => { :format => "html"}
   end
-  
   
   # books:
   resources :books, :only => [:index, :show] do
@@ -35,7 +34,7 @@ Bookcomments::Application.routes.draw do
   # pages:
   match "/about" => "pages#about"
   match "/contacts" => "pages#contacts"
-  match "/licence" => "pages#licence"
+  match "/agreement" => "pages#agreement"
     
   # The priority is based upon order of creation:
   # first created -> highest priority.

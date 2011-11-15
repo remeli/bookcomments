@@ -1,0 +1,11 @@
+<div class="row" id="show-page-article">
+  <div class="twelve columns">
+    <h1 class="show-article-title"><%= @article.title %></h1>
+    <div class="show-article-content">
+      <%= raw(@article.body) %>
+    </div>
+    <div class="show-article-add">
+      <%= to_date(@article) %>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     @title = "Контакты"
   end
   
-  def license
-    @title = "Лицензионное соглашение"
+  def agreement
+    @title = "Пользовательское соглашение"
   end
 end

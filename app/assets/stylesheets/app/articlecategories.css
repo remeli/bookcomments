@@ -1,3 +1,24 @@
-// Place all the styles related to the articlecategories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.one-article{
+  margin-bottom:20px;
+}
+.one-article .title-article{
+  font-size:16px;
+  font-weight:normal;
+  margin-bottom:10px;
+}
+.one-article .content-article{
+  padding-top:5px;
+  padding-bottom:5px;
+  text-align:left;
+}
+.one-article .content-article p{
+  margin-bottom:5px;
+}
+.add-date-article{
+  font-size:10px;
+  text-align:right;
+  color:#999;
+}
+.add-date-article:hover{
+  color:#5F5F5F;
+}

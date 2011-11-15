@@ -1,3 +1,18 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#show-page-article{
+  margin:10px 0px 10px 0px;
+}
+#show-page-article .show-article-title{
+  font-size:18px;
+  font-weight:normal;
+}
+#show-page-article .show-article-content p{
+  margin-bottom:5px;
+}
+#show-page-article .show-article-add{
+  font-size:10px;
+  text-align:right;
+  color:#999;
+}
+#show-page-article .show-article-add:hover{
+  color:#5F5F5F;
+}

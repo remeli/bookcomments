@@ -54,15 +54,13 @@ h3.desc_title{
   min-height:250px;
   padding:5px;
   width:210px;
-  border:1px solid #eee;
-}
-#categories-layout .block-genre-index:hover{
-  border:1px solid #ddd;
 }
 #categories-layout .genre-title-index{
-  font-size:14px;
+  font-size:12px;
+  padding-bottom:5px;
   margin-bottom:0px;
-  color:#717171;
+  color:#515151;
+  border-bottom:1px solid #C8C8C8;
 }
 #categories-layout .block-genre-index ul{
   margin-top:10px;

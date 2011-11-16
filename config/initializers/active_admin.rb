@@ -116,4 +116,5 @@ ActiveAdmin.setup do |config|
       activeadmin_reloader.execute_if_updated 
     end 
   end
+  
 end

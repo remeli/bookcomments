@@ -11,6 +11,7 @@ class Book < ActiveRecord::Base
   validates :authorname, :presence => true
   validates :category_id, :presence => true
   
+  
   default_scope order("created_at DESC")
   
   has_attached_file :cover, :styles => {:medium => "200x275>", :thumb => "125x170>" },
@@ -18,6 +19,26 @@ class Book < ActiveRecord::Base
       :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
   validates_attachment_size :cover, :less_than => 5.megabytes
   validates_attachment_content_type :cover, :content_type => ['image/jpeg', 'image/png', 'image/gif']
+  
+  
+  before_save :upd_author
+  before_update :upd_author
+  
+  private
+    
+    def upd_author
+      self.author_id = search_author(authorname)
+    end
+    
+    def search_author(authorname)
+      author = Author.find_by_name(authorname)
+      unless author.nil?
+        author.id
+      else
+        nil
+      end
+    end
+  
   
   # before_save :change_permalink
   # before_update :change_permalink

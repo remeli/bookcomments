@@ -9,10 +9,14 @@
     </div>
     <div id="authors-book">
       <h1>Книги автора:</h1>
-      <% @author.books.each do |book| %>
-        <div class="author-book">
-          <%= link_to(image_tag(book.cover(:thumb),:title => book.title),book) %>
-        </div>
+      <% if author_book?(@author) %>
+        <% @author.books.each do |book| %>
+          <div class="author-book">
+            <%= link_to(image_tag(book.cover(:thumb),:title => book.title),book) %>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="not-books">Книг данного автора отсутствуют на нашем сайте</div>
       <% end %>
     </div>
   </div>

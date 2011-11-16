@@ -59,11 +59,12 @@
 #authors-book h1{
   font-size:25px;
   font-weight:normal;
-  margin:20px 0px 20px 0px;
+  margin:20px 0px 10px 0px;
 }
 #authors-book .author-book{
   float:left;
   margin-right:10px;
+  margin-top:10px;
 }
 #authors-book .author-book img{
   width:115px;
@@ -72,4 +73,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Параметры тени */
   -moz-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Firefox */
   -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+}
+#authors-book .author-book img:hover{
+  opacity:0.9;
+}
+#authors-book .not-books{
+  font-size:11px;
 }

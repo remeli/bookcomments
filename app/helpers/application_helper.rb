@@ -116,4 +116,9 @@ module ApplicationHelper
     end
   end
     
+  def author_book?(object)
+    if object.books.size > 0
+      true
+    end
+  end
 end

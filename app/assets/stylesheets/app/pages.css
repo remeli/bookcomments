@@ -17,3 +17,22 @@
   color:#fff;
   width:360px;
 }
+#about-page img{
+  float:left;
+}
+#about-page-content{
+  clear:both;
+  padding-top:20px;
+}
+.agreement-page h1{
+  font-size:30px;
+  font-weight:normal;
+}
+.agreement-page h3{
+  font-size:20px;
+  font-weight:normal;
+}
+.agreement-page h4{
+  font-size:20px;
+  font-weight:normal;
+}

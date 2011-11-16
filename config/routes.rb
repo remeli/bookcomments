@@ -37,6 +37,10 @@ Bookcomments::Application.routes.draw do
   match "/about" => "pages#about"
   match "/contacts" => "pages#contacts"
   match "/agreement" => "pages#agreement"
+  
+  # search:
+  match "search" => "search#index"
+  
     
   # The priority is based upon order of creation:
   # first created -> highest priority.

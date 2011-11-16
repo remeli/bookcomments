@@ -1,0 +1,11 @@
+<div class="row" id="search-page">
+  <h1 class="title">Результат:</h1>
+  <div class="twelve cols">
+    <% @authors.each do |author| %>
+    <div class="author-result">
+      <h3 class="author-title"><%= link_to author.name, author %></h3>
+      <%= link_to(image_tag(author.photo.url(:thumb), :title => author.name), author) %>
+    </div>
+    <% end %>    
+  </div>
+</div>

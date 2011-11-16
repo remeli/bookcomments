@@ -1,0 +1,11 @@
+<div class="row" id="search-page">
+  <h1 class="title">Результат:</h1>
+  <div class="twelve cols">
+    <% @books.each do |book| %>
+    <div class="result">
+      <h3 class="book-title"><%= link_to book.title, book %></h3>
+      <%= link_to(image_tag(book.cover.url(:thumb), :title => book.title), book) %>
+    </div>
+    <% end %>    
+  </div>
+</div>

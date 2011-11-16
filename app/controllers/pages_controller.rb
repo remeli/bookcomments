@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def index
     @title = "Главная"
-    @tenbooks = Book.limit(10)
+    @tenbooks = Book.reorder("created_at DESC").limit(10)
   end
   
   def about

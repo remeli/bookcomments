@@ -111,3 +111,12 @@ $(document).ready(function(){
   var validator = $('#new_comment').validate();
 });
 
+// alert slidedown
+$(function(){
+  $('.alert').animate({
+    opacity: 0.1
+  }, 1500);
+  $(function(){
+    $('.alert').slideUp('normal');
+  });
+});

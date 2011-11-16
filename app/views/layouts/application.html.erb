@@ -13,6 +13,16 @@
       <div class="eight columns" id="main-content">
         <div class="row" id="left-content">
           <div class="twelve columns">
+            <% if alert %>
+              <div class="alert">
+                <%= alert %>
+              </div>
+            <% elsif notice %>
+              <div class="notice">
+                <%= notice %>
+              </div>
+            <% end %>
+            
             <%= yield %>
           </div>
         </div>

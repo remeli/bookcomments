@@ -32,7 +32,7 @@ class BooksController < ApplicationController
   end
   
   def topcomments
-    
+    @books = Book.reorder("comments_count DESC").limit(20)
   end
   
 end

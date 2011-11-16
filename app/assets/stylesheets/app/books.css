@@ -35,3 +35,15 @@
 #sharing-social-network{
   margin-top:20px;
 }
+#top20 .top20-book{
+  float:left;
+  margin-right:10px;
+}
+#top20 img{
+  width:115px;
+  height:170px;
+  box-shadow: 0 0 10px black; /* Параметры тени */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+}

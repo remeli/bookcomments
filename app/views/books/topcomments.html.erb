@@ -1,0 +1,9 @@
+<div class="row" id="top20">
+  <div class="twelve columns">
+    <% @books.each do |book| %>
+      <div class="top20-book">
+        <%= link_to(image_tag(book.cover.url(:thumb)), book) %>
+      </div>
+    <% end %>
+  </div>
+</div>

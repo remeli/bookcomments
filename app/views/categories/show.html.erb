@@ -11,7 +11,12 @@
     </div>
     <div class="nine columns books_info">
       <h4 class="authorname">
-        Автор: <span><%= book.authorname %></span>
+        Автор:
+        <% if isset_authorid?(book) %>
+          <span><%= link_to book.authorname, book.author %></span>  
+        <% else %>
+          <span><%= book.authorname %></span>
+        <% end %>
       </h4>
       <h4 class="isbn">
         ISBN: <span><%= book.isbn %></span>

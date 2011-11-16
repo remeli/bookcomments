@@ -1,5 +1,6 @@
 <div class="row" id="authors-list">
   <div class="twelve columns">
+    <h1 class="title">Авторы:</h1>
     <% @authors.each do |author| %>
       <div class="author-item">
         <h1><%= link_to(author.name, author) %></h1>

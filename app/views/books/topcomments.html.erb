@@ -1,8 +1,9 @@
 <div class="row" id="top20">
   <div class="twelve columns">
+    <h1 class="title">TOP-20 книг по обсуждениям:</h1>
     <% @books.each do |book| %>
       <div class="top20-book">
-        <%= link_to(image_tag(book.cover.url(:thumb)), book) %>
+        <%= link_to(image_tag(book.cover.url(:thumb), :title => book.title), book) %>
       </div>
     <% end %>
   </div>

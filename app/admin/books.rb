@@ -18,16 +18,13 @@ ActiveAdmin.register Book do
   
   form do |f|
     f.inputs "Детали" do
-      f.inputs "Категории" do
+      f.inputs "Категории:" do
         f.collection_select :category_id, Category.childrens(:order => "title"), :id, :title
       end
-      f.input :title, :label => "Название книги"
+      f.input :title, :label => "Название книги:"
       f.input :authorname, :label => "Имя автора:"
-      f.inputs "Автор из списка:" do
-        f.collection_select :author_id, Author.all(:order => "name"), :id, :name, :include_blank => true
-      end
       f.input :year, :as => :date,:start_year => Date.today.year-90, :end_year => Date.today.year+6, :discard_month => true, :discard_day => true, :label => "Год выпуска:"
-      f.input :cover, :as => :file, :label => "Фотография"
+      f.input :cover, :as => :file, :label => "Фотография:"
       f.input :isbn, :label => "ISBN:"
       f.input :description, :label => "Описание:"
     end

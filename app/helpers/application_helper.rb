@@ -11,6 +11,12 @@ module ApplicationHelper
     }
   end
   
+  def isset_authorid?(object)
+    unless object.author_id.nil?
+      true
+    end
+  end
+  
   def title
     base_title = site[:title]
     if @title

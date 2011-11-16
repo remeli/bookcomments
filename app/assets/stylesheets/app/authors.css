@@ -4,6 +4,11 @@
   margin-bottom:20px;
   width:25%;
 }
+#authors-list h1.title{
+  font-size:30px;
+  font-weight:normal;
+  margin-bottom:25px;
+}
 .author-item h1{
   font-size:12px;
   font-weight:normal;
@@ -43,4 +48,28 @@
 }
 #author-show-page .description-author{
   margin-top:5px;
+}
+
+/* authors book*/
+#authors-book{
+  border-top:1px solid #eee;
+  margin-top:15px;
+  margin-bottom:5px;
+}
+#authors-book h1{
+  font-size:25px;
+  font-weight:normal;
+  margin:20px 0px 20px 0px;
+}
+#authors-book .author-book{
+  float:left;
+  margin-right:10px;
+}
+#authors-book .author-book img{
+  width:115px;
+  height:170px;
+  box-shadow: 0 0 10px black; /* Параметры тени */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Параметры тени */
+  -moz-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Firefox */
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Safari и Chrome */
 }

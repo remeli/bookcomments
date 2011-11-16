@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111115065716) do
+ActiveRecord::Schema.define(:version => 20111116085039) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -85,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20111115065716) do
     t.integer  "cover_file_size"
     t.datetime "cover_updated_at"
     t.integer  "author_id"
+    t.integer  "comments_count",     :default => 0
   end
 
   create_table "categories", :force => true do |t|

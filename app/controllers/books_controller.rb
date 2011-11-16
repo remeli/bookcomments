@@ -30,4 +30,9 @@ class BooksController < ApplicationController
     @comments = Comment.neitraltype.where(:book_id => @book.id)
     render('show')
   end
+  
+  def topcomments
+    
+  end
+  
 end

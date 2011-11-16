@@ -1,7 +1,7 @@
 class Comment < ActiveRecord::Base
   
   # associations:
-  belongs_to :book
+  belongs_to :book, :counter_cache => true
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   

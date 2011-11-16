@@ -25,6 +25,8 @@ Bookcomments::Application.routes.draw do
     end
     get "page/:page.:format", :action => :index, :on => :collection, :defaults => { :format => "html"}
   end
+  
+  match "top20comments" => "books#topcomments", :as => :top20
 
   # authors
   resources :authors, :only => [:index, :show] do

@@ -41,7 +41,9 @@ Bookcomments::Application.routes.draw do
   # search:
   match "search" => "search#index"
   
-    
+  # archive:
+  match "archive" => "archive#index"
+  match "archive/:year" => "archive#show", :constraints => { :year => /\d{4}/ }, :as => "archiveyear"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

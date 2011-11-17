@@ -1,0 +1,46 @@
+<% for book in @books %>
+<div class="book_one">
+  <div class="row">
+    <div class="twelve columns">
+      <h1 class="book_title"><%= link_to book.title, book %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="three columns book_cover">
+      <%= image_tag(book.cover.url(:thumb), :title => book.title) %>
+    </div>
+    <div class="nine columns books_info">
+      <h4 class="authorname">
+        Автор:
+        <% if isset_authorid?(book) %>
+          <span><%= link_to book.authorname, book.author %></span>  
+        <% else %>
+          <span><%= book.authorname %></span>
+        <% end %>
+      </h4>
+      <h4 class="isbn">
+        ISBN: <span><%= book.isbn %></span>
+      </h4>
+      <h4 class="year">
+        Год выпуска: <span><%= to_year(book) %></span>
+      </h4>
+      <h4 class="category">
+        Жанр: <span><%= link_to book.category.title, book.category %></span>
+      </h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="twelve columns book_description">
+      <h3 class="desc_title">Описание:</h3>
+      <div>
+        <%= book.description %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<div class="row" id="paginate_block">
+  <div class="twelve columns">
+    <%= paginate @books %>
+  </div>
+</div>

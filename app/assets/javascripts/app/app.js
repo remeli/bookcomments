@@ -120,3 +120,10 @@ $(function(){
     $('.alert').slideUp('normal');
   });
 });
+
+//archive-humor
+$(document).ready(function(){
+  $(".archive-humor-link").click(function(){
+    alert("Типа того");
+  });
+});

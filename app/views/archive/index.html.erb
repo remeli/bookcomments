@@ -1,0 +1,14 @@
+<div class="row" id="archive-page">
+  <div class="twelve columns">
+    <h1 class="title">Архив:</h1>
+    <% @years.each do |year| %>
+      <span class="year">
+        <%= link_to year, archiveyear_path(year) %>
+      </span>
+    <% end %>    
+  </div>
+</div>
+<div class="archive-humor">
+  <a href="#" class="archive-humor-link">Матрица чтоли?</a>
+</div>
+

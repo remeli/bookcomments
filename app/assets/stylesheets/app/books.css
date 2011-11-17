@@ -1,4 +1,9 @@
 /* books show*/
+#books-index-page h1.title{
+  font-size:30px;
+  font-weight:normal;
+  margin-bottom:10px;
+}
 #book-show{
   margin-top:20px;
   padding:5px;

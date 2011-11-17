@@ -1,3 +1,23 @@
-<% @articles.each do |article| %>
-  <%= article.title %>
-<% end %>
+<div class="row" id="search-page">
+  <div class="twelve columns">
+    <h1 class="title">Результат:</h1>
+    <% @articles.each do |article| %>
+      <div class="row one-article">
+        <div class="twelve columns">
+          <h1 class="title-article"><%= link_to article.title, article %></h1>
+          <div class="content-article">
+            <%= raw(article.body) %>
+          </div>
+          <div class="add-date-article">
+            Дата публикации: <%= to_date(article) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="row" id="paginate_block">
+  <div class="twelve columns">
+    <%= paginate @articles %>
+  </div>
+</div>

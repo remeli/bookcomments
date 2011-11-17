@@ -1,5 +1,6 @@
 <div class="row" id="books-index-page">
   <div class="twelve columns">
+    <h1 class="title">На полках:</h1>
     <% for book in @books %>
       <div class="book-index-one">
         <%= link_to(image_tag(book.cover.url(:thumb)), book) %>

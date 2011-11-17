@@ -1,3 +1,11 @@
+<div class="row">
+  <!-- todo: сделать алфавит -->
+  <div class="twelve columns alphabet">
+    <% @alphabet.each do |k| %>
+    <%= link_to k, "" %>
+    <% end %>
+  </div>
+</div>
 <div class="row" id="main-page">
   <div class="twelve columns last-ten-books">
     <h2 class="title">Последние 10 книг:</h2>

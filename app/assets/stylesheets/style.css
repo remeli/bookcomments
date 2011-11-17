@@ -6,10 +6,10 @@
   height:80px;
   font-family:Arial,Tahoma,sans-serif;
 }
-#header h1#main-title{
-  font-size:20px;
-  margin-top:25px;
-  margin-left:30px;
+#header div#main-title{
+  margin-top:15px;
+  margin-left:15px;
+  width:200px;
 }
 /* search */
 #search{

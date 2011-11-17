@@ -1,6 +1,8 @@
 <div class="row" id="header">
   <div class="six columns" >
-    <h1 id="main-title">КнигаЛицо.ру</h1>
+    <div id="main-title">
+      <a href="/"><img src="/assets/logo.png" alt=""></a>
+    </div>
   </div>
   <div class="six columns" id="search">
     <%= form_tag "/search", :method => :get, :class => "nice custom" do %>
@@ -12,14 +14,5 @@
       </select>
       <%= submit_tag "Поиск", :id => "submit-search", :class => "small white nice button radius" %>
     <% end %>
-    <!-- <form class="nice custom">
-      <input type="text" id="search_text" placeholder="The Тёлки...">
-      <select id="form-list-search">
-        <option SELECTED value="books">книги</option>
-        <option value="authors">авторы</option>
-        <option valie="other">разное</option>
-      </select>
-      <input type="submit" id="submit-search" class="small white nice button radius" value="Поиск">    
-    </form> -->
   </div>
 </div>

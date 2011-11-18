@@ -322,6 +322,9 @@ color: #ccc;
 
 
 /* index page */
+#main-page .last-ten-books{
+  margin-bottom:20px;
+}
 #main-page .last-ten-books .title{
   font-size:25px;
   font-weight:normal;

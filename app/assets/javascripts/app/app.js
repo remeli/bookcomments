@@ -132,3 +132,9 @@ $(document).ready(function(){
     alert("Типа того");
   });
 });
+// slider
+$(window).load(function() {
+    $('#slider').nivoSlider({
+    
+    });
+});

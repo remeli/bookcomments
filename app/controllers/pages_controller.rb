@@ -2,6 +2,11 @@ class PagesController < ApplicationController
   def index
     @title = "Главная"
     @tenbooks = Book.reorder("created_at DESC").limit(10)
+    rand_count = 0
+    while rand_count == 0
+      rand_count = rand(Book.count-10)
+    end
+    @randbooks = Book.limit(10).offset(rand_count)
     @alphabet = {   
       "0-9" => "1",
       "А" => "А",

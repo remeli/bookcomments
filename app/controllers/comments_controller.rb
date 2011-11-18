@@ -21,3 +21,5 @@ class CommentsController < ApplicationController
       @book = Book.find(params[:book_id])
     end
 end
+
+

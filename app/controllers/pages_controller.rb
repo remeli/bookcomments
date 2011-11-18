@@ -52,3 +52,5 @@ class PagesController < ApplicationController
     @title = "Пользовательское соглашение"
   end
 end
+
+

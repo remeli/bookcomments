@@ -40,6 +40,7 @@ class BooksController < ApplicationController
       @books = Book.all(:conditions => ['substr(title,1,1) = ?', alphasym])
     end
     @books = Kaminari.paginate_array(@books).page(params[:page]).per(10)
+    
     unless @books.size > 0
       redirect_to root_path, :alert => "К сожалению, мы ничего не нашли"
     else

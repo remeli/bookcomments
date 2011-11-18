@@ -112,15 +112,20 @@ $(document).ready(function(){
 });
 
 // alert slidedown
-$(function(){
-  $('.alert').animate({
-    opacity: 0.1
-  }, 1500);
-  $(function(){
-    $('.alert').slideUp('normal');
+// $(function(){
+//   $('.alert').animate({
+//     opacity: 0.1
+//   }, 1500);
+//   $(function(){
+//     $('.alert').slideUp('normal');
+//   });
+// });
+
+$(document).ready(function(){
+  $(".close").click(function(){
+    $(".alert-box").slideUp('fast');
   });
 });
-
 //archive-humor
 $(document).ready(function(){
   $(".archive-humor-link").click(function(){

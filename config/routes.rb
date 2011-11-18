@@ -16,7 +16,7 @@ Bookcomments::Application.routes.draw do
   end
   
   # books:
-  resources :books, :only => [:index, :show] do
+  resources :books, :only => [:index, :show, :alphabet] do
     resources :comments
     member do
       get :plus
@@ -25,6 +25,8 @@ Bookcomments::Application.routes.draw do
     end
     get "page/:page.:format", :action => :index, :on => :collection, :defaults => { :format => "html"}
   end
+  
+  match "alphabet/:alphasym" => "books#alphabet", :as => :alphabet
   
   match "top20comments" => "books#topcomments", :as => :top20
 
@@ -44,6 +46,8 @@ Bookcomments::Application.routes.draw do
   # archive:
   match "archive" => "archive#index"
   match "archive/:year" => "archive#show", :constraints => { :year => /\d{4}/ }, :as => "archiveyear"
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

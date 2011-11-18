@@ -1,8 +1,7 @@
-<div class="row">
-  <!-- todo: сделать алфавит -->
-  <div class="twelve columns alphabet">
-    <% @alphabet.each do |k| %>
-    <%= link_to k, "" %>
+<div class="row" id="alphabet">
+  <div class="twelve columns">
+    <% @alphabet.each do |k,v| %>
+    <%= link_to k, alphabet_path(v) %>
     <% end %>
   </div>
 </div>

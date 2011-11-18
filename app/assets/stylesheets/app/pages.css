@@ -36,3 +36,20 @@
   font-size:20px;
   font-weight:normal;
 }
+#alphabet{
+/*  border:1px solid #ccc;*/
+  margin-top:20px;
+  margin-bottom:50px;
+  padding:5px 0px 5px 0px;
+}
+#alphabet a{
+  margin-right:7px;
+  color:#666666;
+  font-size:14px;
+  font-family:Helvetica;
+  text-decoration:underline;
+}
+#alphabet a:hover{
+  text-decoration:underline;
+  color:#B0B0B0;
+}

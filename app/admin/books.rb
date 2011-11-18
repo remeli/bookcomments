@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Book do
   # before_filter do
   #   Book.class_eval do

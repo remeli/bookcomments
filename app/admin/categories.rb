@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Category do
   before_filter do
     Category.class_eval do

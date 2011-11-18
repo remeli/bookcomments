@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Articlecategory do
   before_filter do
     Articlecategory.class_eval do

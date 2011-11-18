@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Article do
   
   menu :priority => 5, :label => "Статьи"

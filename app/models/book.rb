@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Book < ActiveRecord::Base  
   # todo: прикрутить рейтинг
   

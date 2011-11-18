@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Articlecategory < ActiveRecord::Base
   
   has_many :articles

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class ArchiveController < ApplicationController
   def index
     @years = (1800..Date.today.year+4)

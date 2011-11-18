@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register Author do
   menu :priority => 3, :label => "Авторы"
   index do

@@ -1,26 +1,29 @@
-# У вас должна быть настроена авторизация ssh по сертификатам
+require 'rvm/capistrano'
+
+require 'rubygems'
+require 'bundler/capistrano'
+
 
 set :application, "litra"
-
-# настройка системы контроля версий и репозитария, по умолчанию - git, если используется иная система версий, нужно изменить значение scm
-set :scm, :git
-set :repository,  "git://github.com/remeli/bookcomments.git"
-
-set :user, "hosting_lagox"
-set :use_sudo, false
-set :deploy_to, "/home/hosting_lagox/projects/litra"
-
 
 role :web, "lithium.locum.ru"   # Your HTTP server, Apache/etc
 role :app, "lithium.locum.ru"   # This may be the same as your `Web` server
 role :db,  "lithium.locum.ru", :primary => true # This is where Rails migrations will run
 
-# эта секция для того, чтобы вы не хранили доступ к базе в системе контроля версий. Поместите dayabase.yml в shared,
-# чтобы он копировался в нужный путь при каждом выкладывании новой версии кода
-# так лучше с точки зрения безопасности, но если не хотите - прсото закомментируйте этот таск
+set :user, "hosting_lagox"
+set :use_sudo, false
+set :rack_env, 'production'
+set :rake, 'rake'
 
-
-# Если хотите поместить конфиг в shared и не хранить его в системе контроя версий - раскомментируйте следующие строки
+set :scm, :git
+set :deploy_to, "/home/hosting_lagox/projects/litra"
+set :repository,  "git://github.com/remeli/bookcomments.git"
+set :branch, 'master'
+set :bundle_gemfile, 'Gemfile'
+set :bundle_dir, 'vendor/gems'
+set :bundle_flags, '--deployment --quiet'
+set :bundle_without, [ :development, :test ]
+set :bundle_cmd, "RAILS_ENV=production rvm use ree-1.8.7 do bundle"
 
 after "deploy:update_code", :copy_database_config
 
@@ -29,20 +32,16 @@ task :copy_database_config, roles => :app do
  run "cp #{db_config} #{release_path}/config/database.yml"
 end
 
+after "deploy:update_code", :symlink_shared
 #paperclip
 task :symlink_shared, roles => :app do
   run "ln -nfs #{shared_path}/system #{release_path}/public/system"
 end
-after "deploy:update_code", :symlink_shared
-
 
 set :unicorn_conf, "/etc/unicorn/litra.lagox.rb"
 set :unicorn_pid, "/var/run/unicorn/litra.lagox.pid"
 
-
-
   set :unicorn_start_cmd, "rvm use ree-1.8.7 do bundle exec unicorn_rails -Dc #{unicorn_conf}"
-
 
 
 # - for unicorn - #
@@ -62,3 +61,17 @@ namespace :deploy do
     run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
   end
 end
+
+namespace :assets do
+  desc 'Compile all the assets named in config.assets.precompile'
+  task :precompile do
+    run "cd #{current_path} && #{bundle_cmd} exec #{rake} assets:precompile"
+  end
+
+  desc 'Remove compiled assets'
+  task :clean do
+    run "cd #{current_path} && #{bundle_cmd} exec #{rake} assets:clean"
+  end
+end
+
+after "deploy:update_code", :'assets:precompile'

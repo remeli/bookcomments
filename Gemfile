@@ -8,9 +8,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'therubyracer'
 gem 'uglifier'
-gem "rake", "0.9.2.2"
 gem 'kaminari'
-gem 'unicorn'
 gem 'activeadmin'
 gem "meta_search", '~> 1.1.1'
 gem "acts_as_tree", "~> 0.1.1"

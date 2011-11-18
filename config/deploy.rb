@@ -1,9 +1,3 @@
-require 'rvm/capistrano'
-
-require 'rubygems'
-require 'bundler/capistrano'
-
-
 set :application, "litra"
 
 role :web, "lithium.locum.ru"   # Your HTTP server, Apache/etc

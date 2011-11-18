@@ -9,4 +9,4 @@ public/system/
 *~
 .project
 .DS_Store
-.sass-cache/
+.sass-cache/.bundle\n

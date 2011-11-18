@@ -35,7 +35,10 @@ task :symlink_shared, roles => :app do
 end
 after "deploy:update_code", :symlink_shared
 
-
+task :installgems, roles => :app do
+  "rvm use ree-1.8.7 do bundle install --path \"vendor/gems\""
+end
+after "deploy:update_code", :installgems
 
 set :unicorn_conf, "/etc/unicorn/litra.lagox.rb"
 set :unicorn_pid, "/var/run/unicorn/litra.lagox.pid"

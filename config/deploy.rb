@@ -22,12 +22,19 @@ role :db,  "lithium.locum.ru", :primary => true # This is where Rails migrations
 
 # Если хотите поместить конфиг в shared и не хранить его в системе контроя версий - раскомментируйте следующие строки
 
-#after "deploy:update_code", :copy_database_config
+after "deploy:update_code", :copy_database_config
 
-#task :copy_database_config, roles => :app do
-#  db_config = "#{shared_path}/database.yml"
-#  run "cp #{db_config} #{release_path}/config/database.yml"
-#end
+task :copy_database_config, roles => :app do
+ db_config = "#{shared_path}/database.yml"
+ run "cp #{db_config} #{release_path}/config/database.yml"
+end
+
+#paperclip
+task :symlink_shared, roles => :app do
+  run "ln -nfs #{shared_path}/system #{release_path}/public/system"
+end
+after "deploy:update_code", :symlink_shared
+
 
 set :unicorn_conf, "/etc/unicorn/litra.lagox.rb"
 set :unicorn_pid, "/var/run/unicorn/litra.lagox.pid"

@@ -16,12 +16,12 @@
             <% if alert %>
               <div class="alert-box">
                 <%= alert %>
-                <a href="#" class="close">&times;</a>
+                <a href="#" class="close" title="Закрыть">&times;</a>
               </div>
             <% elsif notice %>
               <div class="alert-box">
                 <%= notice %>
-                <a href="#" class="close">&times;</a>
+                <a href="#" class="close" title="Закрыть">&times;</a>
               </div>
             <% end %>
             <%= yield %>

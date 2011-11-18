@@ -36,13 +36,13 @@ end
 after "deploy:update_code", :symlink_shared
 
 
+
 set :unicorn_conf, "/etc/unicorn/litra.lagox.rb"
 set :unicorn_pid, "/var/run/unicorn/litra.lagox.pid"
 
 
 
-set :unicorn_start_cmd, "rvm use ree-1.8.7 do bundle exec unicorn_rails -Dc #{unicorn_conf}"
-
+set :unicorn_start_cmd, "rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf}"
 
 
 # - for unicorn - #

@@ -7,9 +7,6 @@ gem 'json'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'coffee-rails'
-gem 'therubyracer'
-gem 'uglifier'
-gem 'unicorn', "~> 4.1.1"
 gem 'kaminari'
 gem 'activeadmin'
 gem "meta_search", '~> 1.1.1'
@@ -19,4 +16,9 @@ group :development do
   gem 'rails-dev-tweaks', '~> 0.5.1'
   gem 'awesome_print'
   gem 'capistrano'
+end
+group :production do
+  gem 'unicorn'
+  gem 'uglifier'
+  gem 'therubyracer'
 end

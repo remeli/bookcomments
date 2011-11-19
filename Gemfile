@@ -19,5 +19,3 @@ group :development do
   gem 'awesome_print'
   gem 'capistrano'
 end
-
-# todo: deploy работает, не работает компиляция6 просит rake 0.9.2

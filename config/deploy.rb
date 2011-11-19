@@ -73,6 +73,6 @@ namespace :deploy do
 
   desc "Restart Application"
   task :restart, :roles => :app do
-    run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
+    run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || cd #{current_path} #{unicorn_start_cmd}"
   end
 end

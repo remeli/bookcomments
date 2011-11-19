@@ -32,7 +32,7 @@ after "deploy:update_code", "gems:install"
 namespace :gems do
   desc "Install gems"
   task :install, roles => :app do
-    run "cd #{current_path} && rvm use 1.9.3 do bundle install --path ../../shared/gems"
+    run "cd #{current_path} && rvm use 1.9.3 do bundle install --path ../shared/gems"
   end
 end
 

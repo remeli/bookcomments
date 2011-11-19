@@ -56,15 +56,14 @@ set :unicorn_pid, "/var/run/unicorn/twolitra.lagox.pid"
 
 
 
-  set :unicorn_start_cmd, "rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf}"
-
+set :unicorn_start_cmd, "rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf}"
 
 
 # - for unicorn - #
 namespace :deploy do
   desc "Start application"
   task :start, :roles => :app do
-    run "cd #{current_path} && #{unicorn_start_cmd}"
+    run unicorn_start_cmd
   end
 
   desc "Stop application"

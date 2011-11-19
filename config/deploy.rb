@@ -1,5 +1,3 @@
-require "bundler/capistrano"
-
 set :application, "twolitra"
 
 # настройка системы контроля версий и репозитария, по умолчанию - git, если используется иная система версий, нужно изменить значение scm
@@ -15,12 +13,12 @@ role :web, "lithium.locum.ru"   # Your HTTP server, Apache/etc
 role :app, "lithium.locum.ru"   # This may be the same as your `Web` server
 role :db,  "lithium.locum.ru", :primary => true # This is where Rails migrations will run
 
-# bundle
-set :bundle_gemfile,  "Gemfile"
-set :bundle_dir, File.join(fetch(:shared_path), 'gems')
-set :bundle_flags,    "--deployment --quiet"
-set :bundle_without,  [:development, :test]
-set :bundle_cmd, "rvm use 1.9.3 do bundle"
+# # bundle
+# set :bundle_gemfile,  "Gemfile"
+# set :bundle_dir, File.join(fetch(:shared_path), 'gems')
+# set :bundle_flags,    "--deployment --quiet"
+# set :bundle_without,  [:development, :test]
+# set :bundle_cmd, "rvm use 1.9.3 do bundle"
 
 # эта секция для того, чтобы вы не хранили доступ к базе в системе контроля версий. Поместите dayabase.yml в shared,
 # чтобы он копировался в нужный путь при каждом выкладывании новой версии кода
@@ -28,6 +26,15 @@ set :bundle_cmd, "rvm use 1.9.3 do bundle"
 
 
 # Если хотите поместить конфиг в shared и не хранить его в системе контроя версий - раскомментируйте следующие строки
+
+#gems
+after "deploy:update_code", "gems:install"
+namespace :gems do
+  desc "Install gems"
+  task :install, roles => :app do
+    run "cd #{current_release} && rvm use 1.9.3 do bundle install --path ../../shared/gems"
+  end
+end
 
 # shared database
 after "deploy:update_code", :copy_database_config

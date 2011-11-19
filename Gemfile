@@ -5,8 +5,8 @@ gem "rake", "~> 0.9.2.2"
 gem 'mysql2'
 gem 'json'
 gem 'jquery-rails'
-gem 'sass-rails'
-gem 'coffee-rails'
+gem "sass-rails", "~> 3.1.5"
+gem "coffee-rails", "~> 3.1.1"
 gem 'kaminari'
 gem 'activeadmin'
 gem "meta_search", '~> 1.1.1'

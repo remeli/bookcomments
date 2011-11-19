@@ -63,16 +63,16 @@ set :unicorn_start_cmd, "rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicor
 namespace :deploy do
   desc "Start application"
   task :start, :roles => :app do
-    run unicorn_start_cmd
+    run "cd #{current_path} && unicorn_start_cmd"
   end
 
   desc "Stop application"
   task :stop, :roles => :app do
-    run "[ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}`"
+    run "cd #{current_path} && [ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}`"
   end
 
   desc "Restart Application"
   task :restart, :roles => :app do
-    run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
+    run "cd #{current_path} && [ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
   end
 end

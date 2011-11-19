@@ -9,7 +9,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'therubyracer'
 gem 'uglifier'
-gem 'unicorn'
+gem 'unicorn', "~> 4.1.1"
 gem 'kaminari'
 gem 'activeadmin'
 gem "meta_search", '~> 1.1.1'

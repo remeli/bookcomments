@@ -6,42 +6,21 @@ set :repository,  "git://github.com/remeli/bookcomments.git"
 
 set :user, "hosting_lagox"
 set :use_sudo, false
-set :deploy_to, "/home/hosting_lagox/projects/twolitra"
+set :deploy_to, "/home/#{user}/projects/#{application}"
 
 
 role :web, "lithium.locum.ru"   # Your HTTP server, Apache/etc
 role :app, "lithium.locum.ru"   # This may be the same as your `Web` server
 role :db,  "lithium.locum.ru", :primary => true # This is where Rails migrations will run
+set :deploy_via, :remote_cache
 
-# # bundle
-# set :bundle_gemfile,  "Gemfile"
-# set :bundle_dir, File.join(fetch(:shared_path), 'gems')
-# set :bundle_flags,    "--deployment --quiet"
-# set :bundle_without,  [:development, :test]
-# set :bundle_cmd, "rvm use 1.9.3 do bundle"
-
-# эта секция для того, чтобы вы не хранили доступ к базе в системе контроля версий. Поместите dayabase.yml в shared,
-# чтобы он копировался в нужный путь при каждом выкладывании новой версии кода
-# так лучше с точки зрения безопасности, но если не хотите - прсото закомментируйте этот таск
-
-
-# Если хотите поместить конфиг в shared и не хранить его в системе контроя версий - раскомментируйте следующие строки
 
 #gems
-after "deploy:update_code", "gems:install"
-namespace :gems do
-  desc "Install gems"
-  task :install, roles => :app do
-    run "cd #{current_path} && rvm use 1.9.3 do bundle install --path ../shared/gems"
-  end
-end
-
-#assets
-# after "gems:install", "assets:compile"
-# namespace :assets do
-#   desc "Assets compile"
-#   task :compile, roles => :app do
-#     run "cd #{current_path} && rvm use 1.9.3 do bundle exec rake assets:precompile RAILS_ENV=production"
+# after "deploy:update_code", "gems:install"
+# namespace :gems do
+#   desc "Install gems"
+#   task :install, roles => :app do
+#     run "cd #{current_path} && rvm use 1.9.3 do bundle install --path ../shared/gems"
 #   end
 # end
 
@@ -54,22 +33,33 @@ end
 
 # paperclip
 after "deploy:update_code", :symlink_shared
-
 task :symlink_shared, roles => :app do
   run "ln -nfs #{shared_path}/system #{release_path}/public/system"
 end
 
+#assets
+after "deploy:bundle_gems", "assets:compile"
+namespace :assets do
+  desc "Assets compile"
+  task :compile, roles => :app do
+    run "cd #{deploy_to}/current && rvm use 1.9.3 do bundle exec rake assets:precompile RAILS_ENV=production"
+  end
+end
 
 set :unicorn_conf, "/etc/unicorn/twolitra.lagox.rb"
 set :unicorn_pid, "/var/run/unicorn/twolitra.lagox.pid"
-
-
-
 set :unicorn_start_cmd, "rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf}"
 
 
-# - for unicorn - #
+after "deploy", "deploy:bundle_gems"
+after "deploy:bundle_gems", "deploy:restart"
+
 namespace :deploy do
+  desc "Bundle install"
+  task :bundle_gems, :roles => :app do
+    run "cd #{deploy_to}/current && rvm use 1.9.3 do bundle install --path ../../shared/gems"
+  end
+  
   desc "Start application"
   task :start, :roles => :app do
     run "cd #{current_path} && #{unicorn_start_cmd}"
@@ -85,3 +75,4 @@ namespace :deploy do
     run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || cd #{current_path} #{unicorn_start_cmd}"
   end
 end
+

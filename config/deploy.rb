@@ -37,13 +37,13 @@ namespace :gems do
 end
 
 #assets
-after "gems:install", "assets:compile"
-namespace :assets do
-  desc "Assets compile"
-  task :compile, roles => :app do
-    run "cd #{current_path} && rvm use 1.9.3 do bundle exec rake assets:precompile RAILS_ENV=production"
-  end
-end
+# after "gems:install", "assets:compile"
+# namespace :assets do
+#   desc "Assets compile"
+#   task :compile, roles => :app do
+#     run "cd #{current_path} && rvm use 1.9.3 do bundle exec rake assets:precompile RAILS_ENV=production"
+#   end
+# end
 
 # shared database
 after "deploy:update_code", :copy_database_config

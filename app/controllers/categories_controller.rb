@@ -12,6 +12,9 @@ class CategoriesController < ApplicationController
     @title = @category.title
     @description = @category.description
     @cat_books = @category.books.page(params[:page]).per(7)
+    if @cat_books.size == 0
+      redirect_to root_path, :notice => "Книг по данному жанру - нет"
+    end
   end
   
 end

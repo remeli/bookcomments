@@ -26,3 +26,4 @@ class Comment < ActiveRecord::Base
   scope :minustype, where(:plusminus => 2)
   
 end
+# todo: сделать админ комментарии

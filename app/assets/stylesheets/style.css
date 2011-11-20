@@ -486,6 +486,7 @@ color: #922;
 }
 .site-fb-comments{
   margin-top:20px;
+  margin-left:10px;
 }
 .site-fb-comments h1{
   font-size: 18px;
@@ -494,4 +495,5 @@ color: #922;
 }
 #fb-like-page{
   margin-top:50px;
+  margin-left:20px;
 }

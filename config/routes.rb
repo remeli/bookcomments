@@ -1,3 +1,4 @@
+# encoding: utf-8
 Bookcomments::Application.routes.draw do 
   
   resources :articles, :only => [:index, :show]

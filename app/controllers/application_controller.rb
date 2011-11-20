@@ -1,4 +1,5 @@
 # encoding: utf-8
+# todo: не работает закрытие алертов
 class ApplicationController < ActionController::Base
   protect_from_forgery
   

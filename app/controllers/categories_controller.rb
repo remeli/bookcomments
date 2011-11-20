@@ -8,7 +8,6 @@ class CategoriesController < ApplicationController
   end
   
   def show
-    # base:
     @category = Category.find_by_permalink(params[:id])
     @title = @category.title
     @description = @category.description

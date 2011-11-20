@@ -48,28 +48,6 @@ $(document).ready(function() {
     $('input, textarea').placeholder();
 
 });
-
-//search focus
-// $(document).ready(function() {
-//     $('input[type="text"]').addClass("idleField");
-//     $('input[type="text"]').focus(function() {
-//         $(this).removeClass("idleField").addClass("focusField");
-//         if (this.value == this.defaultValue) {
-//             this.value = '';
-//         }
-//         if (this.value != this.defaultValue) {
-//             this.select();
-//         }
-//     });
-//     $('input[type="text"]').blur(function() {
-//         $(this).removeClass("focusField").addClass("idleField");
-//         if ($.trim(this.value == '')) {
-//             this.value = (this.defaultValue ? this.defaultValue: '');
-//         }
-//     });
-// });
-
-
 //tree
 $(document).ready(function(){
  $("#menutree").treeview({
@@ -111,15 +89,6 @@ $(document).ready(function(){
   var validator = $('#new_comment').validate();
 });
 
-// alert slidedown
-// $(function(){
-//   $('.alert').animate({
-//     opacity: 0.1
-//   }, 1500);
-//   $(function(){
-//     $('.alert').slideUp('normal');
-//   });
-// });
 
 $(document).ready(function(){
   $(".close").click(function(){
@@ -131,10 +100,4 @@ $(document).ready(function(){
   $(".archive-humor-link").click(function(){
     alert("Типа того");
   });
-});
-// slider
-$(window).load(function() {
-    $('#slider').nivoSlider({
-    
-    });
 });

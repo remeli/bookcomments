@@ -23,15 +23,18 @@
   </div>
   <div class="row" id="sharing-social-network">
     <div class="twelve columns">
-      <!-- facebook: -->
-      <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
-      <!-- vk: -->
-      <div id="vk_like"></div>
-      <script type="text/javascript">
-      VK.Widgets.Like("vk_like", {type: "mini"});
-      </script>
+      <!-- social sharing: -->
+      <div class="sharing-text">Поделитесь с друзьями:</div> 
+      <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+      <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
     </div>
   </div>
 </div>
 <!-- comments -->
 <%= render('shared/comments') %>
+<div class="clear">
+</div>
+<div class="site-fb-comments">
+  <h1>Комментарии Facebook:</h1>
+  <div class="fb-comments" data-href="2litra.ru" data-num-posts="10" data-width="550"></div>
+</div>

@@ -478,3 +478,20 @@ color: #922;
 .author-photo-index a img:hover{
   opacity:0.9;  
 }
+.sharing-text{
+  float:left;
+  margin-top:5px;
+  margin-right:5px;
+  font-size:11px;
+}
+.site-fb-comments{
+  margin-top:20px;
+}
+.site-fb-comments h1{
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom:20px;
+}
+#fb-like-page{
+  margin-top:50px;
+}

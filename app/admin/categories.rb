@@ -1,13 +1,29 @@
 # encoding: utf-8
 ActiveAdmin.register Category do
-  before_filter do
+  # before_filter do
+  #   Category.class_eval do
+  #     def to_param
+  #       id.to_s
+  #     end
+  #   end
+  # end
+
+  around_filter do |controller, action|
     Category.class_eval do
       def to_param
         id.to_s
       end
     end
+    begin
+      action.call
+    ensure
+      Category.class_eval do
+        def to_param
+          permalink
+        end
+      end
+    end
   end
-  
   menu :priority => 1, :label => "Категории"
   
   # index page:

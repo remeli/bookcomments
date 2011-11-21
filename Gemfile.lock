@@ -182,7 +182,6 @@ DEPENDENCIES
   acts_as_tree (~> 0.1.1)
   awesome_print
   capistrano
-  cocaine
   coffee-rails
   jquery-rails
   json

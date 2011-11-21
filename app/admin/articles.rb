@@ -16,7 +16,7 @@ ActiveAdmin.register Article do
         f.collection_select :articlecategory_id, Articlecategory.all(:order => "title"), :id, :title
       end
       f.input :title, :label => "Название"
-      f.input :body, :label => "Текст:", :input_html => {:class => 'editor'}
+      f.input :body, :label => "Текст:"
     end
     f.buttons
   end

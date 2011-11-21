@@ -100,11 +100,6 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_stylesheet.css'
   #
   # To load a javascript file:
-  config.register_javascript '/assets/admin/jquery.tinymce.js'
-  config.register_javascript '/assets/admin/active_admin_custom.js'
-  config.register_javascript '/assets/admin/tiny_mce_popup.js'
-  config.register_javascript '/assets/admin/tiny_mce_src.js'
-  config.register_javascript '/assets/admin/tiny_mce.js'
 
   
   if Rails.env == "development" 

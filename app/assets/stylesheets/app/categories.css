@@ -49,11 +49,12 @@ h3.desc_title{
   padding-left:10px;
 }
 #categories-layout .block-genre-index{
-  float:left;
-  margin:10px;
-  min-height:250px;
-  padding:5px;
-  width:210px;
+  float: left;
+  position: relative;
+  margin: 10px;
+  min-height: 300px;
+  padding: 5px;
+  width: 210px;
 }
 #categories-layout .genre-title-index{
   font-size:12px;

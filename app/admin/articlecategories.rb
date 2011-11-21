@@ -1,9 +1,26 @@
 # encoding: utf-8
 ActiveAdmin.register Articlecategory do
-  before_filter do
+  # before_filter do
+  #   Articlecategory.class_eval do
+  #     def to_param
+  #       id.to_s
+  #     end
+  #   end
+  # end
+  
+  around_filter do |controller, action|
     Articlecategory.class_eval do
       def to_param
         id.to_s
+      end
+    end
+    begin
+      action.call
+    ensure
+      Articlecategory.class_eval do
+        def to_param
+          permalink
+        end
       end
     end
   end

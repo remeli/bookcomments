@@ -5,7 +5,7 @@
       <%= image_tag @author.photo.url(:medium), :title => @author.name %>
     </div>
     <div class="description-author">
-      <%= @author.description %>
+      <%= raw(@author.description) %>
     </div>
     <div class="row" id="sharing-social-network">
       <div class="twelve columns">

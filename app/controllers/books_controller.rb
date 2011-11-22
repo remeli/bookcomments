@@ -45,7 +45,7 @@ class BooksController < ApplicationController
     unless @books.size > 0
       redirect_to root_path, :alert => "К сожалению, мы ничего не нашли"
     else
-      render('index')  
+      render('index')
     end
   end
   

@@ -7,14 +7,20 @@
   font-weight:normal;
   margin-bottom:25px;
 }
-#search-page .result{
-  float:left;
-  margin-right:20px;
-  margin-top:5px;
-  margin-bottom:40px;
-  width:30%;
+#search-page ul#books-list{
+  display:block;
+  list-style:none;
+  text-align:justify;
 }
-#search-page .result img{
+#search-page ul#books-list li{
+  display:inline-block;
+  position:relative;
+  width:19%;
+  vertical-align:top;
+  text-align:left;
+  margin-top:15px;
+}
+#search-page img{
   width:115px;
   height:170px;
   box-shadow: 0 0 10px black; /* Параметры тени */
@@ -22,11 +28,12 @@
   -moz-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Firefox */
   -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Для Safari и Chrome */
 }
-#search-page .result img:hover{
+#search-page img:hover{
   opacity:0.9;
 }
-#search-page .result .book-title{
-  font-size:13px;
+#search-page .book-title{
+  font-size:12px;
+  margin-top:5px;
   font-weight:normal;
   height:30px;
 }

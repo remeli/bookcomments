@@ -21,7 +21,11 @@ class Book < ActiveRecord::Base
       :default_url => "/assets/missing_cover_book.jpg"
   validates_attachment_size :cover, :less_than => 5.megabytes
   validates_attachment_content_type :cover, :content_type => ['image/jpeg', 'image/png', 'image/gif']
-  
+
+  # random
+  def self.random
+    find(:all).sample(10)
+  end  
   
   before_save :upd_author
   before_update :upd_author

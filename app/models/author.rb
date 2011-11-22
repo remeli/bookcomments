@@ -15,7 +15,6 @@ class Author < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
   # random
-  
   def self.random
     find(:all).sample(10)
   end

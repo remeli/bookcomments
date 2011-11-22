@@ -15,11 +15,7 @@ class ApplicationController < ActionController::Base
   end
   
   def load_random_ten_authors
-    rand_count = 0
-    while rand_count == 0
-      rand_count = rand(Author.all.count-10)
-    end
-    @rand_authors = Author.limit(10).offset(rand_count)
+    @rand_authors = Author.random
   end
   
   def load_articlecategories

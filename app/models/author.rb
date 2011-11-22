@@ -14,6 +14,12 @@ class Author < ActiveRecord::Base
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
+  # random
+  
+  def self.random
+    find(:all).sample(10)
+  end
+
   after_save :updatebooks
   after_update :updatebooks
   

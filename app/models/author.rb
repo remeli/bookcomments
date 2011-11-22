@@ -16,7 +16,7 @@ class Author < ActiveRecord::Base
 
   # random
   def self.random
-    find(:all).sample(10)
+    find(:all).sample(15)
   end
 
   after_save :updatebooks

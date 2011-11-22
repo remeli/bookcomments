@@ -345,10 +345,18 @@ color: #ccc;
 
 /* books index */
 
-#books-index-page .book-index-one{
-  float:left;
-  width:20%;
-  margin-top:20px;
+#books-index-page ul#books-list{
+  display:block;
+  list-style:none;
+  text-align:justify;
+}
+#books-index-page ul#books-list li{
+  display:inline-block;
+  position:relative;
+  width:19%;
+  vertical-align:top;
+  text-align:left;
+  margin-top:15px;
 }
 .book-index-one img{
   margin-right:5px;

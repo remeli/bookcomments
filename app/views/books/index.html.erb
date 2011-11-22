@@ -1,16 +1,18 @@
 <div class="row" id="books-index-page">
   <div class="twelve columns">
     <h1 class="title">На полках:</h1>
-    <% for book in @books %>
-      <div class="book-index-one">
-        <%= link_to(image_tag(book.cover.url(:thumb)), book) %>
-        <div class="book-index-one-desc">
-          <h1><%= link_to(book.title, book) %></h1>
-          <h1><%= to_year(book) %></h1>
-          <h1><%= link_to(book.category.title, book.category) %></h1>
-        </div>
-      </div>
-    <% end %>
+    <ul id="books-list">
+      <% for book in @books %>
+        <li class="book-index-one">
+          <%= link_to(image_tag(book.cover.url(:thumb)), book) %>
+          <div class="book-index-one-desc">
+            <h1><%= link_to(book.title, book) %></h1>
+            <h1><%= to_year(book) %></h1>
+            <h1><%= link_to(book.category.title, book.category) %></h1>
+          </div>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
 <div class="row" id="paginate_block">

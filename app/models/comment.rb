@@ -1,6 +1,6 @@
 # encoding: utf-8
 class Comment < ActiveRecord::Base
-  
+
   # associations:
   belongs_to :book, :counter_cache => true
   
@@ -24,6 +24,6 @@ class Comment < ActiveRecord::Base
   scope :neitraltype, where(:plusminus => 0)
   scope :plustype, where(:plusminus => 1)
   scope :minustype, where(:plusminus => 2)
+
   
 end
-# todo: сделать админ комментарии

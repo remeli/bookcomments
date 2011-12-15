@@ -37,6 +37,9 @@
         <%= f.text_area :body, :class => "required" %>
       </div>
       <div class="field">
+        <%= show_simple_captcha(:label => "Введите код:") %>
+      </div>
+      <div class="field">
         <%= f.submit "Добавить комментарий", :class => "nice small radius white button" %>
       </div>
     <% end %>

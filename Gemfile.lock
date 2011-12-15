@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/galetahub/simple-captcha.git
+  revision: a2a3119aaff1f328fda35f965f382d9a77873064
+  specs:
+    galetahub-simple_captcha (0.1.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -183,6 +189,7 @@ DEPENDENCIES
   awesome_print
   capistrano
   coffee-rails
+  galetahub-simple_captcha!
   jquery-rails
   json
   kaminari

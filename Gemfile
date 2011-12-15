@@ -15,6 +15,8 @@ gem "meta_search", '~> 1.1.1'
 gem 'kaminari'
 gem "acts_as_tree", "~> 0.1.1"
 gem "paperclip", "~> 2.4"
+gem 'galetahub-simple_captcha', :require => 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+
 group :development do
   gem 'rails-dev-tweaks', '~> 0.5.1'
   gem 'awesome_print'

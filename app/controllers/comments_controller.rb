@@ -4,17 +4,24 @@ class CommentsController < ApplicationController
   
   def create
     @comment = @book.comments.new(params[:comment])
-    if @comment.save
-      respond_to do |format|
-        format.html { redirect_to @book, :notice => "Комментарий успешно добавлен" }
-        format.js
-      end
+    if simple_captcha_valid?
+      if @comment.save
+        respond_to do |format|
+          format.html { redirect_to @book, :notice => "Комментарий успешно добавлен" }
+          format.js
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to @book, :alert => "Комментарий не добавлен" }
+          format.js
+        end
+      end      
     else
-      respond do |format|
-        format.html { redirect_to @book, :alert => "Комментарий не добавлен" }
-        format.js
+      respond_to do |format|
+        format.js { render :action => 'fail.js.erb' }
       end
     end
+
   end
   
   private

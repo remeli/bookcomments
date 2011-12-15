@@ -1,6 +1,7 @@
 # encoding: utf-8
 # todo: не работает закрытие алертов
 class ApplicationController < ActionController::Base
+  include SimpleCaptcha::ControllerHelpers
   protect_from_forgery
   
   before_filter :load_categories, :load_child_categories
